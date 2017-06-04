@@ -33,6 +33,8 @@
 		1F38902A1EE1A8CC0039BCFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3890281EE1A8CC0039BCFD /* LaunchScreen.storyboard */; };
 		1F3890351EE1A8CC0039BCFD /* Recycle_CanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3890341EE1A8CC0039BCFD /* Recycle_CanTests.swift */; };
 		1F3890401EE1A8CC0039BCFD /* Recycle_CanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38903F1EE1A8CC0039BCFD /* Recycle_CanUITests.swift */; };
+		1FC156141EE3899300F44611 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC156131EE3899300F44611 /* PinAnnotation.swift */; };
+		1FC156171EE3D4A000F44611 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC156161EE3D4A000F44611 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8F3A022B8EF78255D67D7238 /* Pods_Recycle_CanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2322D2B289A917EE1CB72826 /* Pods_Recycle_CanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		1F38903B1EE1A8CC0039BCFD /* Recycle CanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recycle CanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F38903F1EE1A8CC0039BCFD /* Recycle_CanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recycle_CanUITests.swift; sourceTree = "<group>"; };
 		1F3890411EE1A8CC0039BCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC156131EE3899300F44611 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		1FC156161EE3D4A000F44611 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2322D2B289A917EE1CB72826 /* Pods_Recycle_CanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recycle_CanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A145E2F6D92938A32B0FD2 /* Pods-Recycle Can.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recycle Can.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recycle Can/Pods-Recycle Can.release.xcconfig"; sourceTree = "<group>"; };
 		5116E08DDD94ED99A31C01F1 /* Pods-Recycle CanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recycle CanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recycle CanUITests/Pods-Recycle CanUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC156171EE3D4A000F44611 /* CoreLocation.framework in Frameworks */,
 				1178A5C3056A081F3F2E0DF6 /* Pods_Recycle_Can.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +175,7 @@
 		1F38901C1EE1A8CC0039BCFD /* Recycle Can */ = {
 			isa = PBXGroup;
 			children = (
+				1FC156151EE3BF1400F44611 /* New Group */,
 				1F38901D1EE1A8CC0039BCFD /* AppDelegate.swift */,
 				1F38901F1EE1A8CC0039BCFD /* FirstViewController.swift */,
 				1F3890211EE1A8CC0039BCFD /* SecondViewController.swift */,
@@ -179,6 +185,7 @@
 				1F38902B1EE1A8CC0039BCFD /* Info.plist */,
 				1F0DAEA41EE234AC00AFC7FE /* Database */,
 				1F3442DC1EE1F35D009BB7BB /* AllLocations.swift */,
+				1FC156131EE3899300F44611 /* PinAnnotation.swift */,
 			);
 			path = "Recycle Can";
 			sourceTree = "<group>";
@@ -201,6 +208,13 @@
 			path = "Recycle CanUITests";
 			sourceTree = "<group>";
 		};
+		1FC156151EE3BF1400F44611 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		445EA95CA5B359BB3E230BA7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +231,7 @@
 		93F8D839AB6759D279102A27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FC156161EE3D4A000F44611 /* CoreLocation.framework */,
 				A421C687EC849A27756AA168 /* Pods_Recycle_Can.framework */,
 				5756ABBB35C9FE49DDC25943 /* Pods_Recycle_CanTests.framework */,
 				2322D2B289A917EE1CB72826 /* Pods_Recycle_CanUITests.framework */,
@@ -525,6 +540,7 @@
 			files = (
 				1F3890221EE1A8CC0039BCFD /* SecondViewController.swift in Sources */,
 				1F38901E1EE1A8CC0039BCFD /* AppDelegate.swift in Sources */,
+				1FC156141EE3899300F44611 /* PinAnnotation.swift in Sources */,
 				1F3442DD1EE1F35D009BB7BB /* AllLocations.swift in Sources */,
 				1F3890201EE1A8CC0039BCFD /* FirstViewController.swift in Sources */,
 			);

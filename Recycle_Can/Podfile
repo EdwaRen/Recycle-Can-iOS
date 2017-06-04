@@ -7,6 +7,8 @@ target 'Recycle Can' do
 
   # Pods for Recycle Can
 pod “GoogleMaps”
+  pod “GooglePlaces”
+  pod “GooglePlacePicker”
 
   target 'Recycle CanTests' do
     inherit! :search_paths
