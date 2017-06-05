@@ -33,6 +33,9 @@
 		1F38902A1EE1A8CC0039BCFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3890281EE1A8CC0039BCFD /* LaunchScreen.storyboard */; };
 		1F3890351EE1A8CC0039BCFD /* Recycle_CanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3890341EE1A8CC0039BCFD /* Recycle_CanTests.swift */; };
 		1F3890401EE1A8CC0039BCFD /* Recycle_CanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38903F1EE1A8CC0039BCFD /* Recycle_CanUITests.swift */; };
+		1F72C5591EE4BF7800C37751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72C5581EE4BF7800C37751 /* ViewController.swift */; };
+		1F72C55B1EE4BFA000C37751 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72C55A1EE4BFA000C37751 /* LocationSearchTable.swift */; };
+		1F7E76941EE4702100C4777E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E76931EE4702100C4777E /* MapKit.framework */; };
 		1FC156141EE3899300F44611 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC156131EE3899300F44611 /* PinAnnotation.swift */; };
 		1FC156171EE3D4A000F44611 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC156161EE3D4A000F44611 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8F3A022B8EF78255D67D7238 /* Pods_Recycle_CanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2322D2B289A917EE1CB72826 /* Pods_Recycle_CanUITests.framework */; };
@@ -87,6 +90,10 @@
 		1F38903B1EE1A8CC0039BCFD /* Recycle CanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recycle CanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F38903F1EE1A8CC0039BCFD /* Recycle_CanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recycle_CanUITests.swift; sourceTree = "<group>"; };
 		1F3890411EE1A8CC0039BCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F72C5581EE4BF7800C37751 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F72C55A1EE4BFA000C37751 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		1F72C55C1EE5344200C37751 /* Ottawa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ottawa.gpx; sourceTree = "<group>"; };
+		1F7E76931EE4702100C4777E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1FC156131EE3899300F44611 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		1FC156161EE3D4A000F44611 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2322D2B289A917EE1CB72826 /* Pods_Recycle_CanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recycle_CanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC156171EE3D4A000F44611 /* CoreLocation.framework in Frameworks */,
+				1F7E76941EE4702100C4777E /* MapKit.framework in Frameworks */,
 				1178A5C3056A081F3F2E0DF6 /* Pods_Recycle_Can.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +187,7 @@
 				1F38901D1EE1A8CC0039BCFD /* AppDelegate.swift */,
 				1F38901F1EE1A8CC0039BCFD /* FirstViewController.swift */,
 				1F3890211EE1A8CC0039BCFD /* SecondViewController.swift */,
+				1F72C5581EE4BF7800C37751 /* ViewController.swift */,
 				1F3890231EE1A8CC0039BCFD /* Main.storyboard */,
 				1F3890261EE1A8CC0039BCFD /* Assets.xcassets */,
 				1F3890281EE1A8CC0039BCFD /* LaunchScreen.storyboard */,
@@ -186,6 +195,8 @@
 				1F0DAEA41EE234AC00AFC7FE /* Database */,
 				1F3442DC1EE1F35D009BB7BB /* AllLocations.swift */,
 				1FC156131EE3899300F44611 /* PinAnnotation.swift */,
+				1F72C55A1EE4BFA000C37751 /* LocationSearchTable.swift */,
+				1F72C55C1EE5344200C37751 /* Ottawa.gpx */,
 			);
 			path = "Recycle Can";
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 		93F8D839AB6759D279102A27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F7E76931EE4702100C4777E /* MapKit.framework */,
 				1FC156161EE3D4A000F44611 /* CoreLocation.framework */,
 				A421C687EC849A27756AA168 /* Pods_Recycle_Can.framework */,
 				5756ABBB35C9FE49DDC25943 /* Pods_Recycle_CanTests.framework */,
@@ -318,6 +330,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 4BA7JNM5VD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1F38902F1EE1A8CC0039BCFD = {
 						CreatedOnToolsVersion = 8.3;
@@ -538,6 +555,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F72C55B1EE4BFA000C37751 /* LocationSearchTable.swift in Sources */,
+				1F72C5591EE4BF7800C37751 /* ViewController.swift in Sources */,
 				1F3890221EE1A8CC0039BCFD /* SecondViewController.swift in Sources */,
 				1F38901E1EE1A8CC0039BCFD /* AppDelegate.swift in Sources */,
 				1FC156141EE3899300F44611 /* PinAnnotation.swift in Sources */,

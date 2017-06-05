@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Recycle Can/Ottawa.gpx">
+   </FileRef>
+   <FileRef
       location = "group:Recycle Can.xcodeproj">
    </FileRef>
    <FileRef
