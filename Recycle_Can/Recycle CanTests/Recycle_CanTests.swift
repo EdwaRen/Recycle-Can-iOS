@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Recycle_Can
 
 class Recycle_CanTests: XCTestCase {
     
