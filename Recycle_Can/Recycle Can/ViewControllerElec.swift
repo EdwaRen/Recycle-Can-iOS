@@ -25,12 +25,12 @@ class ViewControllerElec: UIViewController {
     
     
     override func viewDidLoad() {
-        print("Hi initial hi\n")
 
        
 
         
         super.viewDidLoad()
+
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let startLocation = CLLocationCoordinate2DMake(45.4236, -75.7009)
 
@@ -72,13 +72,10 @@ class ViewControllerElec: UIViewController {
                 if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
                     let readArray : [NSString] = testArray! as! [NSString]
                     Electronics[initCounter%5] = readArray as [String]
-                    print("Hi\n")
 
                 }
-                print("Hi\n")
 
             }
-            print("Hi\n")
 
             
             initCounter+=1
@@ -88,7 +85,6 @@ class ViewControllerElec: UIViewController {
         //
         //
         while markCount < 5178 {
-            print("Hi\n")
 
             
             let anno = MKPointAnnotation()
@@ -127,11 +123,39 @@ class ViewControllerElec: UIViewController {
         
         
     }
+    func highlightButton(button: UIButton) {
+        button.isHighlighted = true
+        button.isSelected = true
+        button.backgroundColor = UIColor.white
+    }
+    
+    
+    @IBOutlet weak var eButton: UIButton!
+    @IBOutlet weak var bButton: UIButton!
+    @IBOutlet weak var pButton: UIButton!
+    
+    func buttonClicked(sender:UIButton)
+    {
+        eButton.backgroundColor = UIColor.white
+        bButton.backgroundColor = UIColor.white
+        pButton.backgroundColor = UIColor.white
+        
+        eButton.setTitleColor(UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0), for: .normal)
+        bButton.setTitleColor(UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0), for: .normal)
+        pButton.setTitleColor(UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0), for: .normal)
+
+        sender.backgroundColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0)
+        sender.setTitleColor(UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0), for: .selected)
+        sender.setTitleColor(UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0), for: .normal)
+
+    }
    
+//    lazy var buttons: [UIButton] = [self.ewasteButton, self.paintButton, self.batteryButton]
+
     
     
     @IBAction func ewasteButton(_ sender: Any) {
-        
+        buttonClicked(sender: sender as! UIButton)
         mapView.removeAnnotations(mapView.annotations)
         var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 5178)
         var initCounter = 0;
@@ -160,6 +184,8 @@ class ViewControllerElec: UIViewController {
     }
     
     @IBAction func paintButton(_ sender: Any) {
+        buttonClicked(sender: sender as! UIButton)
+
         mapView.removeAnnotations(mapView.annotations)
         var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
         var initCounter = 0;
@@ -190,6 +216,8 @@ class ViewControllerElec: UIViewController {
 
     
     @IBAction func batteryButton(_ sender: Any) {
+        buttonClicked(sender: sender as! UIButton)
+
         mapView.removeAnnotations(mapView.annotations)
         var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 8855)
         var initCounter = 0;
@@ -221,6 +249,10 @@ class ViewControllerElec: UIViewController {
 
         print("button works")
     }
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//
+//    }
    
     
 }

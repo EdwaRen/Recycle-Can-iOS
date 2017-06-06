@@ -28,6 +28,9 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
 //        self.mapView.showsUserLocation = true;
 //        
 //    }
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

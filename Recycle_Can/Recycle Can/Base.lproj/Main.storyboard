@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Black.ttf">
+            <string>Raleway-Black</string>
+        </array>
+        <array key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </array>
+        <array key="Raleway-LightItalic.ttf">
+            <string>Raleway-LightItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="tmJ-sY-bdY">
@@ -18,21 +31,78 @@
                         <viewControllerLayoutGuide type="bottom" id="xUy-Nn-j1K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KPE-65-Sjj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t7W-Lc-0EH">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuD-5H-r5H">
+                                <rect key="frame" x="77" y="233" width="243" height="76"/>
+                                <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="8Gm-Ra-W7b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="26"/>
+                                <state key="normal" title=" ELECTRONICS  ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N86-1N-yhX">
+                                <rect key="frame" x="77" y="317" width="243" height="76"/>
+                                <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="ckF-ua-Ra2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="26"/>
+                                <state key="normal" title=" BATTERIES">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-Id-BYA">
+                                <rect key="frame" x="77" y="401" width="243" height="76"/>
+                                <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="7gO-iY-5Zg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="26"/>
+                                <state key="normal" title=" PAINT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recycle_Can" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-9o-Lc5">
+                                <rect key="frame" x="0.0" y="28" width="320" height="148"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5au-l2-ufM">
+                                <rect key="frame" x="16" y="171" width="288" height="46"/>
+                                <string key="text">Canada's Largest Collection of Household Hazardous Waste Disposal Locations. Find A Location Near You For The Following Materials:</string>
+                                <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gjr-Id-BYA" firstAttribute="top" secondItem="N86-1N-yhX" secondAttribute="bottom" constant="8" symbolic="YES" id="3jV-jJ-ygb"/>
+                            <constraint firstItem="NuD-5H-r5H" firstAttribute="top" secondItem="4jm-9o-Lc5" secondAttribute="bottom" constant="57" id="DEo-XZ-7wc"/>
+                            <constraint firstItem="NuD-5H-r5H" firstAttribute="leading" secondItem="N86-1N-yhX" secondAttribute="leading" id="IEv-Xm-cIG"/>
+                            <constraint firstAttribute="trailing" secondItem="NuD-5H-r5H" secondAttribute="trailing" id="LdI-tl-2F6"/>
+                            <constraint firstItem="5au-l2-ufM" firstAttribute="trailing" secondItem="KPE-65-Sjj" secondAttribute="trailingMargin" id="QeE-ch-qnW"/>
+                            <constraint firstItem="N86-1N-yhX" firstAttribute="top" secondItem="NuD-5H-r5H" secondAttribute="bottom" constant="8" symbolic="YES" id="SIo-aS-y71"/>
+                            <constraint firstItem="NuD-5H-r5H" firstAttribute="trailing" secondItem="N86-1N-yhX" secondAttribute="trailing" id="TdZ-x9-nbm"/>
+                            <constraint firstItem="NuD-5H-r5H" firstAttribute="top" secondItem="5au-l2-ufM" secondAttribute="bottom" constant="16" id="Veh-aS-5Zu"/>
+                            <constraint firstItem="4jm-9o-Lc5" firstAttribute="top" secondItem="7gW-93-GCh" secondAttribute="bottom" constant="8" symbolic="YES" id="ZNK-Fd-YFK"/>
+                            <constraint firstItem="xUy-Nn-j1K" firstAttribute="top" secondItem="gjr-Id-BYA" secondAttribute="bottom" constant="42" id="aQu-W3-KoD"/>
+                            <constraint firstItem="NuD-5H-r5H" firstAttribute="leading" secondItem="KPE-65-Sjj" secondAttribute="leadingMargin" constant="61" id="bRA-6u-PPu"/>
+                            <constraint firstItem="4jm-9o-Lc5" firstAttribute="leading" secondItem="KPE-65-Sjj" secondAttribute="leading" id="eUI-pt-8hZ"/>
+                            <constraint firstItem="N86-1N-yhX" firstAttribute="trailing" secondItem="gjr-Id-BYA" secondAttribute="trailing" id="ep2-17-ULA"/>
+                            <constraint firstItem="4jm-9o-Lc5" firstAttribute="trailing" secondItem="NuD-5H-r5H" secondAttribute="trailing" id="fnm-qh-dYS"/>
+                            <constraint firstItem="5au-l2-ufM" firstAttribute="leading" secondItem="KPE-65-Sjj" secondAttribute="leadingMargin" id="j0L-FZ-Xbh"/>
+                            <constraint firstItem="N86-1N-yhX" firstAttribute="leading" secondItem="gjr-Id-BYA" secondAttribute="leading" id="paJ-XN-9Vs"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" selectedImage="first" id="1kI-Tt-5n0"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house@1x" selectedImage="house@1x" id="1kI-Tt-5n0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYM-RY-J9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="-507"/>
+            <point key="canvasLocation" x="1078.125" y="-508.0985915492958"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -64,7 +134,7 @@
                         <viewControllerLayoutGuide type="bottom" id="q8x-9K-Gbc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="exx-7T-I8y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-zi-4jd">
@@ -74,14 +144,14 @@
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="amk-pH-0qu">
-                                <rect key="frame" x="55" y="72" width="305" height="36"/>
+                                <rect key="frame" x="7.5" y="72" width="305" height="36"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-az-k6z">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="36"/>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="E-WASTE">
-                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="lwm-Yu-RKy"/>
@@ -90,7 +160,7 @@
                                     </button>
                                     <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sX3-q9-4yr">
                                         <rect key="frame" x="105" y="0.0" width="95" height="36"/>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="BATTERIES">
                                             <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,7 +171,7 @@
                                     </button>
                                     <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qJ-K0-BFP">
                                         <rect key="frame" x="210" y="0.0" width="95" height="36"/>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="PAINT">
                                             <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,7 +199,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="tP4-wz-ZBh"/>
                     <connections>
+                        <outlet property="bButton" destination="sX3-q9-4yr" id="pZa-Yd-7Ro"/>
+                        <outlet property="eButton" destination="kSR-az-k6z" id="On4-ke-Puy"/>
                         <outlet property="mapView" destination="AWQ-zi-4jd" id="ei4-tk-3mZ"/>
+                        <outlet property="pButton" destination="0qJ-K0-BFP" id="TL4-o7-ZOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ji-4R-pfX" sceneMemberID="firstResponder"/>
@@ -145,41 +218,111 @@
                         <viewControllerLayoutGuide type="bottom" id="cMp-7c-cKM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M4A-V7-PUs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlC-0f-W6B">
+                                <rect key="frame" x="19" y="72" width="288" height="117"/>
+                                <string key="text">Recycle Can is a project that provides Canadians with a locator to find approved locations to safely dispose of electronics, batteries, and paint. This is to prevent potentially hazardous lead, arsenic, and toxic fumes from leaking out from these materials if improperly deposed of.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0U-Xj-QjC">
+                                <rect key="frame" x="19" y="41" width="288" height="32"/>
+                                <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McA-D7-Yzk">
+                                <rect key="frame" x="19" y="208" width="282" height="32"/>
+                                <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-3d-7di">
+                                <rect key="frame" x="19" y="242" width="282" height="67"/>
+                                <string key="text">We are constantly updating the locations of approved recycling locations throughout Canada. Please contact us if there is personal and business inquiries</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: +1 (613)-325-6257" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGT-lw-eUP">
+                                <rect key="frame" x="19" y="329" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: support@Recyclecan.xyz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-pt-VgO">
+                                <rect key="frame" x="19" y="348" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recycle_Can" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-yK-iPh">
+                                <rect key="frame" x="5" y="416" width="240" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Cb-yK-iPh" secondAttribute="height" multiplier="120:49" id="ReN-rg-DWe"/>
+                                    <constraint firstAttribute="height" constant="98" id="qpW-nd-ygO"/>
+                                    <constraint firstAttribute="width" constant="240" id="zNu-fL-9sJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MGT-lw-eUP" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="5Tg-9b-7ch"/>
+                            <constraint firstItem="McA-D7-Yzk" firstAttribute="top" secondItem="hlC-0f-W6B" secondAttribute="bottom" constant="19" id="8lQ-wL-xwr"/>
+                            <constraint firstItem="6Cb-yK-iPh" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leading" constant="5" id="CsG-y0-6Gu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DbY-3d-7di" secondAttribute="trailing" constant="3" id="Da0-Fj-8dw"/>
+                            <constraint firstItem="hlC-0f-W6B" firstAttribute="top" secondItem="L7F-5b-aAr" secondAttribute="bottom" constant="52" id="GdQ-ZY-Cyx"/>
+                            <constraint firstItem="o0U-Xj-QjC" firstAttribute="trailing" secondItem="M4A-V7-PUs" secondAttribute="trailingMargin" constant="3" id="Hav-pG-ll1"/>
+                            <constraint firstItem="DbY-3d-7di" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="NMA-r4-YHG"/>
+                            <constraint firstItem="o0U-Xj-QjC" firstAttribute="top" secondItem="L7F-5b-aAr" secondAttribute="bottom" constant="21" id="SB4-QZ-EuK"/>
+                            <constraint firstItem="hlC-0f-W6B" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="Tpw-AC-gpf"/>
+                            <constraint firstItem="cMp-7c-cKM" firstAttribute="top" secondItem="6Cb-yK-iPh" secondAttribute="bottom" constant="5" id="Vt3-0n-gku"/>
+                            <constraint firstItem="hlC-0f-W6B" firstAttribute="trailing" secondItem="M4A-V7-PUs" secondAttribute="trailingMargin" constant="3" id="ZHz-2U-14T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="McA-D7-Yzk" secondAttribute="trailing" constant="3" id="dID-ic-t24"/>
+                            <constraint firstItem="DbY-3d-7di" firstAttribute="top" secondItem="McA-D7-Yzk" secondAttribute="bottom" constant="2" id="ee8-q8-vad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MGT-lw-eUP" secondAttribute="trailing" constant="3" id="gxp-5x-8I7"/>
+                            <constraint firstItem="o0U-Xj-QjC" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="hhg-Q5-wia"/>
+                            <constraint firstItem="MGT-lw-eUP" firstAttribute="top" secondItem="DbY-3d-7di" secondAttribute="bottom" constant="20" id="iav-fR-hym"/>
+                            <constraint firstItem="McA-D7-Yzk" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="s3t-7U-FmM"/>
+                            <constraint firstItem="uEQ-pt-VgO" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="uVN-c6-6Zf"/>
+                            <constraint firstItem="uEQ-pt-VgO" firstAttribute="top" secondItem="DbY-3d-7di" secondAttribute="bottom" constant="39" id="ySN-rF-nxY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEQ-pt-VgO" secondAttribute="trailing" constant="3" id="yYX-VI-nfn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kif-aY-fPF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVd-s9-3qT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762.4000000000001" y="1070.9145427286358"/>
+            <point key="canvasLocation" x="2761.875" y="1070.0704225352113"/>
         </scene>
         <!--Location Search Table-->
         <scene sceneID="G6g-WN-fyA">
             <objects>
                 <tableViewController storyboardIdentifier="LocationSearchTable" id="xbI-d0-B8k" customClass="LocationSearchTable" customModule="Recycle_Can" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="v8N-1E-bfI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Gdf-cO-0wH" detailTextLabel="PqF-MG-gHq" style="IBUITableViewCellStyleSubtitle" id="4BE-XK-w5R">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4BE-XK-w5R" id="ssK-SN-eVc">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gdf-cO-0wH">
-                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PqF-MG-gHq">
-                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -199,12 +342,13 @@
             </objects>
             <point key="canvasLocation" x="2430" y="175"/>
         </scene>
-        <!--Electronics-->
+        <!--Map-->
         <scene sceneID="Pcf-Yz-jfi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y1K-oa-0eq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Electronics" image="Circle" selectedImage="Circle" id="h5A-vU-9eW"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="nav" selectedImage="nav" id="h5A-vU-9eW"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mge-Li-yBp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -221,9 +365,10 @@
         <!--Item-->
         <scene sceneID="XPH-Xr-o1N">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cg-w0-sDu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QA9-RF-Guy"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8cg-w0-sDu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="share" selectedImage="share" id="QA9-RF-Guy"/>
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mw9-TC-HZV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -239,7 +384,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Circle" width="64" height="64"/>
-        <image name="first" width="30" height="30"/>
+        <image name="Recycle_Can" width="1650" height="550"/>
+        <image name="house@1x" width="25" height="25"/>
+        <image name="nav" width="30" height="30"/>
+        <image name="share" width="25" height="25"/>
     </resources>
 </document>
