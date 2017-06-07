@@ -26,12 +26,13 @@ class ViewControllerElec: UIViewController {
     
     override func viewDidLoad() {
 
-       
+        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
+
 
         
         super.viewDidLoad()
 
-        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let span = MKCoordinateSpanMake(0.3, 0.3)
         let startLocation = CLLocationCoordinate2DMake(45.4236, -75.7009)
 
         let region = MKCoordinateRegionMake(startLocation, span)
@@ -58,14 +59,16 @@ class ViewControllerElec: UIViewController {
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
         
-        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 5178)
-        
+        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
+        var Battery : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
+        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
+
         
         var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost", "BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
         var initCounter = 0;
         
         
-        while initCounter < 5 {
+        while initCounter < 15 {
             
             
             if initCounter<5{
@@ -74,59 +77,130 @@ class ViewControllerElec: UIViewController {
                     Electronics[initCounter%5] = readArray as [String]
 
                 }
-
+            } else if initCounter < 10{
+                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+                    let readArray : [NSString] = testArray! as! [NSString]
+                    Battery[initCounter%5] = readArray as [String]
+                    
+                }
+            } else if initCounter < 15{
+                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+                    let readArray : [NSString] = testArray! as! [NSString]
+                    Paint[initCounter%5] = readArray as [String]
+                    
+                }
             }
+            
 
             
             initCounter+=1
         }
         
-        var markCount = 0
-        //
-        //
-        while markCount < 5178 {
-
-            
-            let anno = MKPointAnnotation()
-            let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
-            anno.coordinate = myLocation
-            anno.title = Electronics[0][markCount]
-            anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
-            
-//            let reuseId = "pin"
-//            var pinView = MKPinAnnotationView(annotation: anno, reuseIdentifier: reuseId)
-//
-//            let smallSquare = CGSize(width: 30, height: 30)
-//            let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-//            button.setBackgroundImage(UIImage(named: "MenuBar.png"), for: UIControlState())
-//            
-//
-//            button.accessibilityHint = Electronics[1][markCount]
-//            button.accessibilityLabel = Electronics[2][markCount]
-//            
-//            button.addTarget(self, action: #selector(self.getDirections(button:)), for: .touchUpInside)
-//            
-//            pinView.canShowCallout = true
-//            pinView.leftCalloutAccessoryView = button
-
-            
-            
-//            let span = MKCoordinateSpanMake(0.1, 0.1)
-//            let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-            self.mapView.addAnnotation(anno)
-
-            markCount += 1
-        }
-        //                self.mapView.setRegion(region, animated: true)
-
         
         
+            var markCount = 0
+            while markCount < 1888 {
+                print(markCount)
+                let anno = MKPointAnnotation()
+                let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
+                anno.coordinate = myLocation
+                anno.title = Electronics[0][markCount]
+                anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
+                self.mapView.addAnnotation(anno)
+                
+                markCount += 1
+            }
+            
+                
         
     }
     func highlightButton(button: UIButton) {
         button.isHighlighted = true
         button.isSelected = true
         button.backgroundColor = UIColor.white
+    }
+    func update() {
+        let selected: String = (UserDefaults.standard.object(forKey: "selector") as AnyObject) as! String
+        let defaults = UserDefaults.standard
+        defaults.set("-", forKey: "selector")
+        if selected == "e" || selected == "b" || selected == "p" {
+            mapView.removeAnnotations(mapView.annotations)
+
+            var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
+            var Battery : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
+            var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
+            var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost", "BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
+            var initCounter = 0;
+            while initCounter < 15 {
+                if initCounter<5{
+                    if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+                        let readArray : [NSString] = testArray! as! [NSString]
+                        Electronics[initCounter%5] = readArray as [String]
+                    }
+                } else if initCounter < 10{
+                    if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+                        let readArray : [NSString] = testArray! as! [NSString]
+                        Battery[initCounter%5] = readArray as [String]
+                    }
+                } else if initCounter < 15{
+                    if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+                        let readArray : [NSString] = testArray! as! [NSString]
+                        Paint[initCounter%5] = readArray as [String]
+                    }
+                }
+                initCounter+=1
+            }
+
+            
+            if selected as! String == "e" {
+                var markCount = 0
+                buttonClicked(sender: eButton)
+                while markCount < 1888 {
+                    print(markCount)
+                    let anno = MKPointAnnotation()
+                    let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
+                    anno.coordinate = myLocation
+                    anno.title = Electronics[0][markCount]
+                    anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
+                    self.mapView.addAnnotation(anno)
+                    
+                    markCount += 1
+                }
+                
+            } else if selected as! String == "b" {
+                buttonClicked(sender: bButton)
+
+                var markCount = 0
+                while markCount < 3042 {
+                    print(markCount)
+                    print(Battery[1][markCount])
+                    let anno = MKPointAnnotation()
+                    let myLocation = CLLocationCoordinate2DMake(Double(Battery[1][markCount])!, Double(Battery[2][markCount])!)
+                    anno.coordinate = myLocation
+                    anno.title = Battery[0][markCount]
+                    anno.subtitle = "Phone: " + Battery[3][markCount] + "\n" + "Postal Code: " + Battery[4][markCount]
+                    self.mapView.addAnnotation(anno)
+                    
+                    markCount += 1
+                }
+            } else if selected as! String == "p" {
+                buttonClicked(sender: pButton)
+
+                var markCount = 0
+                while markCount < 942 {
+                    print(markCount)
+                    let anno = MKPointAnnotation()
+                    let myLocation = CLLocationCoordinate2DMake(Double(Paint[1][markCount])!, Double(Paint[2][markCount])!)
+                    anno.coordinate = myLocation
+                    anno.title = Paint[0][markCount]
+                    anno.subtitle = "Phone: " + Paint[3][markCount] + "\n" + "Postal Code: " + Paint[4][markCount]
+                    self.mapView.addAnnotation(anno)
+                    
+                    markCount += 1
+                }
+            }
+        }
+        
     }
     
     
@@ -157,7 +231,7 @@ class ViewControllerElec: UIViewController {
     @IBAction func ewasteButton(_ sender: Any) {
         buttonClicked(sender: sender as! UIButton)
         mapView.removeAnnotations(mapView.annotations)
-        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 5178)
+        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
         var initCounter = 0;
         var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost"]
         
@@ -171,7 +245,7 @@ class ViewControllerElec: UIViewController {
             initCounter+=1
         }
         var markCount = 0
-        while markCount < 5178 {
+        while markCount < 1888 {
             
             let anno = MKPointAnnotation()
             let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
@@ -219,7 +293,7 @@ class ViewControllerElec: UIViewController {
         buttonClicked(sender: sender as! UIButton)
 
         mapView.removeAnnotations(mapView.annotations)
-        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 8855)
+        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
         var initCounter = 0;
         var fileNames = ["BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
 
@@ -233,8 +307,8 @@ class ViewControllerElec: UIViewController {
             initCounter+=1
         }
         var markCount = 0
-        while markCount < 8855 {
-            
+        while markCount < 3042 {
+            print(markCount)
             let anno = MKPointAnnotation()
             let myLocation = CLLocationCoordinate2DMake(Double(Batteries[1][markCount])!, Double(Batteries[2][markCount])!)
             anno.coordinate = myLocation

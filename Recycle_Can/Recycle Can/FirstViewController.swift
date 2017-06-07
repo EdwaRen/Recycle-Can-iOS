@@ -35,8 +35,8 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 5178)
-        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 8855)
+        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
+        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
         var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
 //
 //        
@@ -49,7 +49,7 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
                     // This solution assumes  you've got the file in your bundle
                     if let path = Bundle.main.path(forResource: fileNames[initCounter], ofType: "txt"){
                         let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
-                        Electronics[initCounter%5] = data.components(separatedBy: "\n")
+                        Electronics[initCounter%5] = data.components(separatedBy: "\r")
                         let defaults = UserDefaults.standard
                         defaults.set(Electronics[initCounter%5], forKey: fileNames[initCounter])
 
@@ -79,49 +79,30 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
             
             initCounter += 1;
         }
-//        
-        
-//        
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.requestWhenInUseAuthorization()
-//        if #available(iOS 9.0, *) {
-//            locationManager.requestLocation()
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//        
-//        searchBarMap.delegate = self
-    
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+//        let defaults = UserDefaults.standard
+//        defaults.set("e", forKey: "selector")
+ 
+
     }
     
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        searchBarMap.resignFirstResponder()
-//        print("Searching ...", searchBarMap.text)
-//        let geocoder = CLGeocoder()
-//        geocoder.geocodeAddressString(searchBarMap.text!) { (placemarks:[CLPlacemark]?, error:Error?) in
-//            if error == nil {
-//                let placemark = placemarks?.first
-//                let anno = MKPointAnnotation()
-//                anno.coordinate = (placemark?.location?.coordinate)!
-//                anno.title = self.searchBarMap.text
-//                let span = MKCoordinateSpanMake(0.075, 0.075)
-//                let region = MKCoordinateRegion(center: anno.coordinate, span: span)
-//                
-//                self.mapView.setRegion(region, animated: true)
-//                self.mapView.addAnnotation(anno)
-//                self.mapView.selectAnnotation(anno, animated: true)
-//                
-//                
-//            } else {
-//                print (error?.localizedDescription ?? "error")
-//            }
-//        }
-//        
-//    }
+    @IBAction func electronicsTitleButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set("e", forKey: "selector")
+        tabBarController!.selectedIndex = 1;
+    }
+    @IBAction func batteriesTitleButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set("b", forKey: "selector")
+        tabBarController!.selectedIndex = 1;
+    }
+   
+    @IBAction func paintTitleButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set("p", forKey: "selector")
+        tabBarController!.selectedIndex = 1;
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
