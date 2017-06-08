@@ -145,8 +145,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-zi-4jd">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-zi-4jd">
+                                <rect key="frame" x="0.0" y="64" width="318.5" height="455"/>
                                 <connections>
                                     <outlet property="delegate" destination="ajO-rO-Xeo" id="2T7-R5-BBA"/>
                                 </connections>
@@ -194,14 +194,41 @@
                                     <constraint firstAttribute="width" constant="305" id="7PQ-ay-tR7"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn4-3Z-fPs">
+                                <rect key="frame" x="131.5" y="456" width="57" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="9VH-HW-ivE"/>
+                                    <constraint firstAttribute="height" constant="54" id="sn4-FF-s3s"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="11" height="6"/>
+                                <state key="normal" image="myLocation">
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="userLocationButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="Vee-gg-eig"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="bel-TZ-tFE">
+                                <rect key="frame" x="80" y="204" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="2Eg-NN-lNO"/>
+                                    <constraint firstAttribute="height" constant="160" id="WK0-To-aUW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="AWQ-zi-4jd" secondAttribute="bottom" id="0fB-xS-P8j"/>
                             <constraint firstItem="amk-pH-0qu" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" constant="8" symbolic="YES" id="6JU-qO-kdX"/>
-                            <constraint firstAttribute="trailing" secondItem="AWQ-zi-4jd" secondAttribute="trailing" id="Git-c4-VHm"/>
-                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" id="QT5-PQ-Z3t"/>
-                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leading" id="XHv-8A-JVr"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leading" id="7Qk-YF-WsO"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="bottom" secondItem="q8x-9K-Gbc" secondAttribute="top" id="Gzv-yc-CxI"/>
+                            <constraint firstItem="bel-TZ-tFE" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="PDk-dh-VF5"/>
+                            <constraint firstItem="Qn4-3Z-fPs" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="RCa-mn-ro5"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="centerX" secondItem="amk-pH-0qu" secondAttribute="centerX" id="UTM-PA-eGp"/>
+                            <constraint firstItem="bel-TZ-tFE" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="eZZ-XD-fSd"/>
+                            <constraint firstItem="bel-TZ-tFE" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="fOc-X0-wdm"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" id="gkU-Lf-C6X"/>
+                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="Qn4-3Z-fPs" secondAttribute="bottom" constant="9" id="tPg-yz-NDa"/>
+                            <constraint firstItem="bel-TZ-tFE" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="vYg-NH-ISS"/>
                             <constraint firstItem="amk-pH-0qu" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="xGJ-Ns-1ja"/>
                         </constraints>
                     </view>
@@ -211,11 +238,12 @@
                         <outlet property="eButton" destination="kSR-az-k6z" id="On4-ke-Puy"/>
                         <outlet property="mapView" destination="AWQ-zi-4jd" id="ei4-tk-3mZ"/>
                         <outlet property="pButton" destination="0qJ-K0-BFP" id="TL4-o7-ZOX"/>
+                        <outlet property="pinchButton" destination="bel-TZ-tFE" id="VuL-ZF-z4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ji-4R-pfX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="173.16341829085459"/>
+            <point key="canvasLocation" x="1765.217391304348" y="170.38043478260872"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Kh-6j-BTe">
@@ -394,7 +422,9 @@
     <resources>
         <image name="Recycle_Can" width="1650" height="550"/>
         <image name="house@1x" width="25" height="25"/>
+        <image name="myLocation" width="256" height="256"/>
         <image name="nav" width="30" height="30"/>
+        <image name="search" width="1536" height="1536"/>
         <image name="share" width="25" height="25"/>
     </resources>
 </document>

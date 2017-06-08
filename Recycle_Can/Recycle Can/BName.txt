@@ -85,7 +85,7 @@ Beacon Hill Home Hardware
 Jean Coutu
 Canadian Tire
 Lowes
-Dépôt DAnge-Gardien
+Dépôt Dange-Gardien
 Best Buy Canada
 Staples
 Home Depot
@@ -127,7 +127,7 @@ Dépôt Wentworth Nord
 Ville de Brownsburg-Chatham
 Staples
 Canadian Tire
-Dépôt Lac des seize îles
+Dépôt Lac des seize Îles
 Batterie Expert Lachute
 ACSIQ
 Dépôt Montcalm
@@ -457,11 +457,11 @@ Uniprix
 Eco-Quartier Mercier Est
 Equipement Lavigne GNE Inc.
 Metro Richelieu Inc
-BMR Quincaillerie de l’Est inc.
+BMR Quincaillerie de lâ€™Est inc.
 BMR Calais / Pigeon
 AV Cellcom Mobility
 Franklin Empire
-Boîte Jaune
+BoÎte Jaune
 BMR Quincaillerie Demers inc.
 Westburne Longueuil
 RONA
@@ -611,7 +611,7 @@ Pépinière Municipale
 Uniprix
 Jean Coutu
 Uniprix
-Entreprises Limoges inc (L’Assomption)
+Entreprises Limoges inc (Lâ€™Assomption)
 Dépôt Lavaltrie
 The Source
 Jean Coutu
@@ -664,7 +664,7 @@ Uniprix
 Caisse Desjardins de lOuest de la Mauricie
 Batteries Expert
 Patrick Morin Inc.
-Municipalité d’Yamachiche
+Municipalité dâ€™Yamachiche
 Agrivert - Coopérative agricole régionale (Yamachiche)
 Dépôt Rive-Nord (St-Thomas)
 D H Electronique
@@ -871,7 +871,7 @@ Westburne Québec
 Les Escomptes Lecompte inc
 Mountain Equipment Co-Op
 Bibliothèque Gabrielle-Roy
-Bureau d’arrondissement La Cité-Limoilou
+Bureau dâ€™arrondissement La Cité-Limoilou
 Jean Coutu
 ENAP Québec
 Coop Université Laval (Zone)
@@ -908,10 +908,10 @@ Auberge Internationale de Quebec
 La Source
 Dépôt Boischatel
 Municipalite LAnge Gardien
-BibliothÃ¨que Saint-Charles
-BibliothÃ¨que Saint-Jean-Baptiste
-ENAP QuÃ©bec
-Bureau dâarrondissement La CitÃ©-Limoilou
+Bibliothèque Saint-Charles
+Bibliothèque Saint-Jean-Baptiste
+ENAP QuÂ©bec
+Bureau dâÂ€Â™arrondissement La CitÂ©-Limoilou
 Dépôt St-Laurent-de-lÎle-dOrléans
 Collecte Lac Beauport
 BMR Centre de renovation Raymond Boies Inc.
@@ -1589,7 +1589,7 @@ Dépôt Montcerf-Lytton
 Dépôt LAscension
 Ville de La Tuque
 Canadian Tire
-DÃ©pÃ´t La Tuque
+DÂ©pÂ´t La Tuque
 Canadian Tire
 RONA
 Friprix
@@ -1635,7 +1635,7 @@ Uniprix
 Dépôt Mont-Joli
 La Coop Purdel Mont-Joli
 Uniprix
-Resources de RÃ©insertion LE PHARE (RDRLP)
+Resources de RÂ©insertion LE PHARE (RDRLP)
 Municipalité de Schefferville
 Municipalité de la Côte-Nord du Golfe Saint-Laurent
 Dépôt Rivière-St-Jean
@@ -1680,7 +1680,6 @@ Canadian Tire
 Écocentre St-François-de-Sales
 RONA
 BMR Martel BMR Enr.
-Ottawa Fastener Supply Ltd
 Jannatec Radio Technologies
 City of Greater Sudbury
 The Source
@@ -2669,7 +2668,7 @@ Fido
 Staples Canada/Business Depot
 Home Depot
 Village of Anmore
-Nester’s Market
+Nesterâ€™s Market
 Westcoast Tool Sales & Service Ltd
 H.P. Electronics
 East Van Bottle Depot
@@ -3040,3 +3039,733 @@ Lowes
 The Home Depot
 Verizon Wireless
 Best Buy
+Ottawa Fastener Supply Ltd
+Canadian Tire
+The Source
+Foxy Recycle
+Best Buy Canada
+Home Depot
+Canadian Tire
+The Source
+Staples
+The Source
+Franklin Empire
+ListenUp! Canada
+The Source
+Home Depot
+RONA
+Home Depot
+Interstate Batteries of Ont
+Canadian Tire
+Staples
+Canadian Tire
+The Source
+uBreakiFix
+ListenUp! Canada
+Staples
+Sears (Canada)
+Staples
+The Source
+Best Buy
+Jean Coutu
+La Source
+Mountain Equipment Co-op
+Manotick Home Hardware
+RONA
+Pharmacie Brunet
+ListenUp! Canada
+Jean Coutu
+The Source
+Staples
+Home Depot
+ListenUp! Canada
+The Source
+The Source
+La Source
+Canadian Tire
+Jean Coutu
+ListenUp! Canada
+RONA
+Staples
+Bureau en Gros
+Henrys
+Barrys Home Hardware
+Township of Russell
+The Source
+Township of North Dundas
+Staples
+Princess Auto
+Canadian Tire
+The Source
+Jean Coutu
+Christie and Walther
+RONA
+The Source
+Staples
+Home Depot
+ListenUp! Canada
+Kingston Area Recycling Centre
+Christie and Walther
+RONA
+Princess Auto
+Staples
+Canadian Tire
+ListenUp! Canada
+Lowes
+Fastenal
+The Source
+Hock Shop Canada
+ListenUp! Canada
+Staples
+Home Depot
+United Rentals
+ListenUp! Canada
+The Source
+Foxboro Fasteners
+Pharmasave
+Newburgh Pharmacy
+Lowes
+Staples
+RONA
+The Source
+RONA Campbellford
+RONA
+ListenUp! Canada
+RONA
+Home Depot
+The Source
+Staples
+Staples
+Home Depot
+Staples
+Canadian Tire
+Canadian Tire
+Home Depot
+MOHLTC - EHSB - Oshawa CACC
+The Source
+ListenUp! Canada
+ListenUp! Canada
+Staples
+Lowes
+Home Depot
+Princess Auto
+Fastenal
+Home Depot
+The Source
+Staples
+Lowes
+Staples
+Canadian Tire
+Canadian Tire
+Batteries Expert
+Home Depot
+The Source
+Home Depot
+Staples
+Best Buy
+ListenUp! Canada
+ListenUp! Canada
+Best Buy
+Staples
+Home Depot
+Princess Auto
+Go Wireless Inc Canada (Parent)
+Go Wireless Canada
+Pinnacle Hobby
+Home Depot
+Home Depot
+Staples
+Home Depot
+ListenUp! Canada
+RONA
+Lowes
+Home Depot
+Staples Canada/Business Depot
+ListenUp! Canada
+Federal Wireless Communication Inc.
+Canadian Tire
+Staples
+Fastenal
+The Source
+Canadian Tire
+ListenUp! Canada
+Franklin Empire
+The Source
+Canadian Tire
+Princess Auto
+Canadian College of Naturopathic Medicine
+Best Buy
+The Source
+Best Buy
+Home Depot
+Staples
+Staples
+Home Depot
+RONA
+Canadian Tire
+Best Buy Canada
+Kelcom
+ListenUp! Canada
+Staples
+Trion Power Tools Services Inc.
+ListenUp! Canada
+ListenUp! Canada
+ListenUp! Canada
+Home Depot
+ListenUp! Canada
+Canadian Tire
+Best Buy
+Home Depot
+Franklin Empire
+La Source
+Lakeshore Communications
+ListenUp! Canada
+Vaughan Public Libraries
+Advantech Communication Systems
+Canadian Tire
+Staples
+Home Depot
+Ricoh Canada
+Transcontinental Printing
+Staples Canada
+Staples
+Home Depot
+Lowes
+Princess Auto
+Fastenal
+Staples Canada
+RONA
+Staples
+Home Depot
+Home Depot
+Home Depot
+ListenUp! Canada
+RONA
+Canadian Tire
+Best Buy
+uBreakiFix
+Lowes
+ListenUp! Canada
+Canadian Tire
+Canadian Tire
+Home Depot
+Best Buy Canada
+RONA
+Staples
+Staples
+ListenUp! Canada
+The Source
+ListenUp! Canada
+RONA
+Home Depot
+Home Depot
+Canadian Tire
+Staples
+Staples
+Home Depot
+The Source
+Atlas Machinery Supply
+Mountain Equipment Co-op
+Staples
+ListenUp! Canada
+ListenUp! Canada
+Ministry of Tourism Culture and Sport
+Program Development & Capacity Office HR Ontario
+Office of the Corporate Chief Information Officer I+IT
+Ministry of Health and Long-Term Care
+Canadian Tire
+Evergreen Brick Works
+MNJCC
+ListenUp! Canada
+The Source
+Best Buy
+Staples
+Staples
+ListenUP! Canada
+ListenUp! Canada
+Telus
+Home Depot
+Home Depot
+Canadian Tire
+Staples
+The Source
+The Source
+Best Buy Canada
+RONA
+Canadian Tire
+ListenUp! Canada
+Staples
+ListenUp! Canada
+uBreakiFix
+The Source
+Home Depot
+The Source
+Town of Oakville
+Post Inn Village - Services for Seniors
+Home Depot
+Home Depot
+ListenUp! Canada
+Staples
+uBreakiFix
+Mississauga Repair Centre
+Global Mobility Products Inc.
+Creek Way Village
+RONA
+Complete Rent-Alls
+RONA
+Ministry of Government & Consumer Services
+Canadian Tire
+Home Depot
+Interstate All Battery Center
+ListenUp! Canada
+Staples
+Home Depot
+Canadian Tire
+The Source
+ListenUp! Canada
+Staples
+ListenUp! Canada
+ListenUp! Canada
+Staples
+Mountain Equipment Co-Op
+ListenUp! Canada
+Stanley Black & Decker
+The Source
+Hudsons Bay Company
+RONA
+MCSCS
+Henrys
+Home Depot
+The Source
+Staples
+Canadian Tire
+Staples
+Home Depot
+RONA
+Home Depot
+Staples
+Canadian Tire
+ListenUp! Canada
+Dashvapes Inc
+Staples
+Henrys
+Best Buy
+Home Depot
+The Source
+The Source
+ListenUp! Canada
+Home Depot
+Staples
+Princess Auto
+Lowes
+ListenUp! Canada
+RONA
+Staples
+ListenUp! Canada
+Sears (Canada)
+Staples
+ListenUp! Canada
+The Source
+The Source
+Home Essentials
+Canadian Tire
+Envirosystems Inc.
+ListenUp! Canada
+The Source
+Staples
+Home Depot
+Staples
+Pharmasave
+ListenUp! Canada
+Franklin Empire
+ListenUp! Canada
+Fastenal
+Staples Canada
+Home Depot
+Princess Auto
+RONA
+RONA
+Staples
+The Source
+Best Buy
+Ontario Public Service
+ListenUp! Canada
+Rona Welland
+Princess Auto
+Pharmasave
+Staples
+Home Depot
+RONA
+Town of Grand Island
+Beatties Basics
+ListenUp! Canada
+Just Accessories
+The Home Depot
+Valu Home Centers
+Valu Home Centers
+The Home Depot
+RadioShack
+RadioShack
+Dewalt Factory Service Center
+RadioShack
+Staples
+Home Depot
+RadioShack
+Drake Lawn & Garden Inc.
+Valu Home Centers
+Valu Home Centers
+ListenUp! Canada
+Dollar General
+Valu Home Centers
+Kenilworth Electronics Co.
+CPR of WNY Tonawanda
+Sears
+RadioShack
+Barnes & Noble
+Lowes
+Wegmans
+The Home Depot
+The Battery Commercial Battery Company
+Valu Home Centers
+Hilti
+The Home Depot
+Saia Communications
+Hectors Hardware
+Sears
+CVS Pharmacy
+Best Buy
+Sayer Home Hardware Ltd.
+The Source
+ListenUp! Canada
+Ministry of Agriculture Food and Rural Affairs
+Staples
+RONA
+The Source
+Staples
+Princess Auto
+Best Buy
+Home Depot
+Staples
+Home Depot
+RONA
+Franklin Empire
+Sears (Canada)
+The Source
+Best Buy
+MRC Systems Inc.
+Staples
+Batteries Expert
+Home Depot
+The Source
+City of Guelph HHW Depot
+Deker Electric Ltd
+The UPS Store
+The Source
+ListenUp! Canada
+Staples
+ListenUp! Canada
+Canadian Tire
+Home Depot
+Staples
+The Source
+Canadian Tire
+The Source
+Home Depot
+Home Depot
+K.C.s Repair Centre
+Staples
+The Source
+ListenUp! Canada
+ListenUp Canada
+Canadian Tire
+Canadian Tire
+The Source
+Staples
+Home Depot
+DeWalt Factory Service (Canada)
+Mountain Equipment Co-op
+Princess Auto
+Staples
+Home Depot
+FCC
+ListenUp! Canada
+RONA
+The Source
+Best Buy
+Staples
+The Source
+ListenUp! Canada
+Staples
+Pharmasave
+Henrys
+Spectrum Communications
+Forest City Communications Ltd.
+The Source
+RONA
+Andersons Electronics Inc
+Lowes
+Best Buy
+The Source
+ListenUp! Canada
+Staples
+Home Depot
+Best Buy
+Municipality of Dutton/Dunwich
+Dutton Dunwich Community Centre
+John Kenneth Galbraith Reference Library
+Mcnaughton Home Hardware Building Centre
+Newbury Community Services
+Staples
+Spectrum Communications
+Gregs Electronics
+Lambton County Administration Building
+Staples
+Staples Canada
+The Source
+Sears (Canada)
+The Source
+ListenUp! Canada
+Staples
+Home Depot
+Chatham-Kent Home Hardware Bldg Ctr
+ListenUp! Canada
+Ontario Clean Water Agency - Essex East (North) Hub
+RONA
+The Source
+Staples
+The Source
+ListenUp! Canada
+Princess Auto
+Staples
+Home Depot
+Sears (Canada)
+Franklin Empire
+The Source
+The Corporation of the Town of Amherstburg
+Staples
+Kelcom (H.O.)
+Batteries and More
+Appliance Medic
+ListenUp! Canada
+Home Depot
+Staples
+Lowes
+Grainger
+RadioShack
+The Home Depot
+Longs Home Hardware Building Center
+Belmatic Battery Systems Inc.
+Princess Auto
+The Source
+Staples
+Sears (Canada)
+City of Owen Sound
+Home Depot
+RONA
+Murrays Sharpening & Tool Repair
+RONA
+The Source
+Princess Auto
+The Source
+Staples
+Mountain Equipment Co-op
+Home Depot
+Henrys
+RONA
+The Source
+Point to Point Communications
+Canadian Tire
+The Source
+Sears (Canada)
+Dashvapes Inc
+Staples
+ListenUp! Canada
+The Source
+The Source
+Staples
+The Source
+Staples
+The Source
+ListenUp! Canada
+Home Hardware
+Home Building Center
+RONA
+Kawartha Hardware Limited
+ListenUp! Canada
+MNRF
+Larry Electric Motor Service Ltd
+Staples
+Home Depot
+The Source
+ListenUp! Canada
+Best Buy Canada
+Canadian Tire
+Township of Douro-Dummer
+Drummond Bldg Supplies
+ListenUp! Canada
+Perth Home Hardware
+Drummond North Elmsley Twnsp
+The Source
+Canadian Tire
+ListenUp! Canada
+Canadian Tire
+The Source
+Staples
+Home Depot
+Bancroft Home Hardware
+Canadian Tire
+The Source
+ListenUp! Canada
+Town of Arnprior
+Rona
+Madawaska Library
+Lyell Landfill Site
+Whitney Library
+Halco Electronics
+The Source
+Canadian Tire
+Staples Canada
+Home Depot
+ListenUp! Canada
+City of Orillia
+Staples
+Canadian Tire
+Home Depot
+The Source
+Home Depot
+Georgian Bay Software
+MTO
+Home Depot
+ListenUp! Canada
+The Source
+Canadian Tire
+Staples
+The Source
+Fastenal
+Home Depot
+City of Greater Sudbury
+Lowes
+Powassan Home Hardware
+Spectrum Telecom Group Ltd
+The Source
+Home Depot
+City of North Bay
+Sears (Canada)
+Best Buy Canada
+ListenUp! Canada
+Gateway Professional Tools
+Staples
+Airy Landfill Site
+Township of South Algonquin
+Whitney Municipal Office
+Dépôt Témiscaming
+Uniprix
+Dépôt Kipawa
+Dépôt Ville-Marie
+Dépôt Béarn
+BMR J. Drolet & Fils ltée
+Bergeron Electronique
+RONA
+Jannatec Radio Technologies
+Princess Auto
+The Source
+Staples
+Spectrum Telecom Group Ltd
+ListenUp! Canada
+Township of Sables-Spanish Rivers
+Unicorn Stationery & Gifts
+Ritchie Electronics
+ListenUp! Canada
+ListenUp! Canada
+Staples
+Home Depot
+Best Buy Canada
+City of Sault Ste. Marie
+Nor Bear Ltd
+Spectrum Telecom Group Ltd
+Rona
+Corporation du Canton de Dubreuilville
+Township of Hornepayne
+Township of Schreiber
+Matawa First Nations Management
+Home Depot
+Staples
+The Source
+Lakehead Communications
+Thunder Bay Communications
+CRC Communications
+MAG
+Canadian Tire
+Bucks Hardware
+Canadian Tire
+Sound North
+Canadian Tire
+Prairie Mobile Communications
+Township of Pickle Lake
+Timbermax Home & Garden
+Pauls Music World
+Hearst Lumber Co.Ltd.
+Hearst Public Library
+The Source
+Canadian Tire
+Town of Cochrane
+Cree Nation of Chisasibi
+Town of Cochrane
+Ricks Hi-Fi & Decorating
+Home Depot
+Staples
+Best Buy Canada
+Spectrum Telecom Group Ltd
+Jean Coutu
+Roberge & Fils Inc
+BMR Matériaux Abitibi ltée
+Dépôt Nédélec
+Dépôt Ste-Germaine-Boulé
+The Source
+The Nation Municipality
+Canadian Tire
+G&S Tech-Tronics
+Home Depot
+City of Cornwall Depot
+RONA
+Staples
+ListenUp! Canada
+W.L.SMITH HARDWARE
+The Home Depot
+Massena Transfer Station
+Lowes
+Canadian Tire
+Best Buy Canada
+Home Depot
+Staples
+RONA
+Home Depot
+Beacon Hill Home Hardware
+Best Buy
+Elmvale Acres Home Hardwa
+DeWalt Factory Service (Canada)
+Lumen Ottawa
+Batteries Expert
+Staples
+Turris Communications
+Fastenal
+ListenUp! Canada
+Uniprix
+Jean Coutu
+Jean Coutu
+Evolu-TIC Outaouais
+Jean Coutu
+Canadian Tire
+Bureau en Gros
+Home Depot
+Jean Coutu
+Best Buy
+Centre Commerciale Les Promenades
+RONA
+La Source - Les Promenades Gatineau
+Jean Coutu
+Uniprix
+Canadian Tire
+Reno Depot
+Dépôt Gatineau
+Jean Coutu

@@ -34,9 +34,11 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        defaults.set("-", forKey: "selector")
         
         var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
-        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
+        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
         var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
 //
 //        
