@@ -80,7 +80,7 @@ class ViewControllerElec: UIViewController {
         resultSearchController.searchResultsUpdater = locationSearchTable
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
-        searchBar.placeholder = "Search for places"
+        searchBar.placeholder = "Set Your Location"
         navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController.hidesNavigationBarDuringPresentation = false
         resultSearchController.dimsBackgroundDuringPresentation = true
@@ -479,8 +479,8 @@ extension ViewControllerElec: HandleMapSearch {
 extension ViewControllerElec : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print("Zoom: \(mapView.getZoomLevel())")
-        if mapView.getZoomLevel() < 10 {
-            mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 10, animated: true)
+        if mapView.getZoomLevel() < 9 {
+            mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 9, animated: true)
         }
     }
     
@@ -498,10 +498,13 @@ extension ViewControllerElec : MKMapViewDelegate {
             // Fallback on earlier versions
         }
         pinView?.canShowCallout = true
-        let smallSquare = CGSize(width: 30, height: 30)
+        let smallSquare = CGSize(width: 40, height: 40)
         let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-        button.setBackgroundImage(UIImage(named: "car.png"), for: UIControlState())
-
+        button.setBackgroundImage(UIImage(named: "car4.png"), for: UIControlState())
+        button.setBackgroundImage(UIImage(named: "car4.png"), for: .selected)
+        button.alpha = 0.9
+//        
+//        [button, setImage,:[UIImage imageNamed:@"pressed.png"] forState:UIControlStateSelected | UIControlStateHighlighted];
         button.accessibilityHint = String(Double(annotation.coordinate.latitude))
         button.accessibilityLabel = String(Double(annotation.coordinate.longitude))
         button.accessibilityValue = annotation.title!
