@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
+//Protocol to go to the location entered in by the user
 protocol HandleMapSearch: class {
     func dropPinZoomIn(_ placemark:MKPlacemark)
 }
@@ -19,32 +19,33 @@ class ViewControllerElec: UIViewController {
     
     var selectedPin: MKPlacemark?
     var resultSearchController: UISearchController!
-    
-    
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
     
     
     override func viewDidLoad() {
+        //Shows a simple instruction 'pinchbutton' on screen
         fadeOut(myView: pinchButton)
 
-
+        //Due to unforeseen errors resulting from updating data between view controllers, this bypass was used to simply check for updates every 100 miliseconds.
         _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
 
        
         
         
         super.viewDidLoad()
+        //Creates a storage check for the user's latitude. Since a latitude of 1000 is impossible, we know that something is wrong if it is still 1000.0
         let defaults = UserDefaults.standard
         defaults.set(1000.0, forKey: "userLatitude")
-
+        
+        //Sets the zoom level and location of the initial map (parliament hill)
         let span = MKCoordinateSpanMake(0.3, 0.3)
         let startLocation = CLLocationCoordinate2DMake(45.4236, -75.7009)
-
         let region = MKCoordinateRegionMake(startLocation, span)
         mapView.setRegion(region, animated: false)
         
+        //Setting up the location manager
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -383,7 +384,7 @@ class ViewControllerElec: UIViewController {
         buttonClicked(sender: sender as! UIButton)
 
         mapView.removeAnnotations(mapView.annotations)
-        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
+        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
         var initCounter = 0;
         var fileNames = ["BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
 
@@ -397,7 +398,7 @@ class ViewControllerElec: UIViewController {
             initCounter+=1
         }
         var markCount = 0
-        while markCount < 3042 {
+        while markCount < 3771 {
             let anno = MKPointAnnotation()
             let myLocation = CLLocationCoordinate2DMake(Double(Batteries[1][markCount])!, Double(Batteries[2][markCount])!)
             anno.coordinate = myLocation
