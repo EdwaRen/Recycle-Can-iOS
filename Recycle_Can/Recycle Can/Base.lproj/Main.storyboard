@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -30,11 +30,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xUy-Nn-j1K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KPE-65-Sjj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuD-5H-r5H">
-                                <rect key="frame" x="77" y="233" width="243" height="76"/>
+                                <rect key="frame" x="77" y="145" width="243" height="76"/>
                                 <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="8Gm-Ra-W7b"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N86-1N-yhX">
-                                <rect key="frame" x="77" y="317" width="243" height="76"/>
+                                <rect key="frame" x="77" y="229" width="243" height="76"/>
                                 <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="ckF-ua-Ra2"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-Id-BYA">
-                                <rect key="frame" x="77" y="401" width="243" height="76"/>
+                                <rect key="frame" x="77" y="313" width="243" height="76"/>
                                 <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="7gO-iY-5Zg"/>
@@ -76,10 +76,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recycle_Can" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-9o-Lc5">
-                                <rect key="frame" x="0.0" y="28" width="320" height="148"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5au-l2-ufM">
-                                <rect key="frame" x="16" y="171" width="288" height="46"/>
+                                <rect key="frame" x="16" y="83" width="288" height="46"/>
                                 <string key="text">Canada's Largest Collection of Household Hazardous Waste Disposal Locations. Find A Location Near You For The Following Materials:</string>
                                 <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -142,11 +142,11 @@
                         <viewControllerLayoutGuide type="bottom" id="q8x-9K-Gbc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="exx-7T-I8y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-zi-4jd">
-                                <rect key="frame" x="0.0" y="64" width="318.5" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <connections>
                                     <outlet property="delegate" destination="ajO-rO-Xeo" id="2T7-R5-BBA"/>
                                 </connections>
@@ -195,7 +195,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn4-3Z-fPs">
-                                <rect key="frame" x="131.5" y="456" width="57" height="54"/>
+                                <rect key="frame" x="131.5" y="368" width="57" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="9VH-HW-ivE"/>
                                     <constraint firstAttribute="height" constant="54" id="sn4-FF-s3s"/>
@@ -209,7 +209,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="bel-TZ-tFE">
-                                <rect key="frame" x="80" y="204" width="160" height="160"/>
+                                <rect key="frame" x="80" y="160" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="2Eg-NN-lNO"/>
                                     <constraint firstAttribute="height" constant="160" id="WK0-To-aUW"/>
@@ -245,16 +245,16 @@
             </objects>
             <point key="canvasLocation" x="1765.217391304348" y="170.38043478260872"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller About-->
         <scene sceneID="8Kh-6j-BTe">
             <objects>
-                <viewController id="3ns-26-zyS" sceneMemberID="viewController">
+                <viewController id="3ns-26-zyS" customClass="ViewControllerAbout" customModule="Recycle_Can" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7F-5b-aAr"/>
                         <viewControllerLayoutGuide type="bottom" id="cMp-7c-cKM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M4A-V7-PUs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlC-0f-W6B">
@@ -289,14 +289,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: support@Recyclecan.xyz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-pt-VgO">
-                                <rect key="frame" x="19" y="348" width="282" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-pt-VgO">
+                                <rect key="frame" x="19" y="348" width="282" height="41"/>
+                                <string key="text">Email: support@Recyclecan.ca 
+Website: www.recyclecan.ca</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recycle_Can" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-yK-iPh">
-                                <rect key="frame" x="5" y="416" width="240" height="98"/>
+                                <rect key="frame" x="5" y="328" width="240" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Cb-yK-iPh" secondAttribute="height" multiplier="120:49" id="ReN-rg-DWe"/>
                                     <constraint firstAttribute="height" constant="98" id="qpW-nd-ygO"/>
@@ -329,6 +331,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kif-aY-fPF"/>
+                    <connections>
+                        <outlet property="logoImage" destination="6Cb-yK-iPh" id="FiN-gh-44P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVd-s9-3qT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,7 +344,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="LocationSearchTable" id="xbI-d0-B8k" customClass="LocationSearchTable" customModule="Recycle_Can" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="v8N-1E-bfI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>

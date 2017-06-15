@@ -55,6 +55,7 @@
 		1FB3F7EB1EE67CB900DD3AF7 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3F7D81EE67CB900DD3AF7 /* Raleway-SemiBoldItalic.ttf */; };
 		1FB3F7EC1EE67CBA00DD3AF7 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3F7D91EE67CB900DD3AF7 /* Raleway-Thin.ttf */; };
 		1FB3F7ED1EE67CBA00DD3AF7 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3F7DA1EE67CB900DD3AF7 /* Raleway-ThinItalic.ttf */; };
+		1FBD8D821EF0CB88001FAB8D /* ViewControllerAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD8D811EF0CB88001FAB8D /* ViewControllerAbout.swift */; };
 		1FC0D8B31EE63A02004BFEB8 /* ViewControllerBat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0D8B21EE63A02004BFEB8 /* ViewControllerBat.swift */; };
 		1FC156141EE3899300F44611 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC156131EE3899300F44611 /* PinAnnotation.swift */; };
 		1FC156171EE3D4A000F44611 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC156161EE3D4A000F44611 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -133,6 +134,7 @@
 		1FB3F7D81EE67CB900DD3AF7 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		1FB3F7D91EE67CB900DD3AF7 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		1FB3F7DA1EE67CB900DD3AF7 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		1FBD8D811EF0CB88001FAB8D /* ViewControllerAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAbout.swift; sourceTree = "<group>"; };
 		1FC0D8B21EE63A02004BFEB8 /* ViewControllerBat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerBat.swift; path = Images/ViewControllerBat.swift; sourceTree = "<group>"; };
 		1FC156131EE3899300F44611 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		1FC156161EE3D4A000F44611 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -229,6 +231,7 @@
 				1F3890211EE1A8CC0039BCFD /* SecondViewController.swift */,
 				1F72C5581EE4BF7800C37751 /* ViewControllerElec.swift */,
 				1FC0D8B21EE63A02004BFEB8 /* ViewControllerBat.swift */,
+				1FBD8D811EF0CB88001FAB8D /* ViewControllerAbout.swift */,
 				1F3890231EE1A8CC0039BCFD /* Main.storyboard */,
 				1F3890261EE1A8CC0039BCFD /* Assets.xcassets */,
 				1F3890281EE1A8CC0039BCFD /* LaunchScreen.storyboard */,
@@ -651,6 +654,7 @@
 				1FC156141EE3899300F44611 /* PinAnnotation.swift in Sources */,
 				1F3442DD1EE1F35D009BB7BB /* AllLocations.swift in Sources */,
 				1F3890201EE1A8CC0039BCFD /* FirstViewController.swift in Sources */,
+				1FBD8D821EF0CB88001FAB8D /* ViewControllerAbout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,8 @@ class ViewControllerElec: UIViewController {
     
     
     override func viewDidLoad() {
+        fadeOut(myView: pinchButton)
+
 
         _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
 
