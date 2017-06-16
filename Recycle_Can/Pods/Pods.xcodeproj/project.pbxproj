@@ -27,32 +27,32 @@
 		0913AB73EE8A996A44FF71CCBA5F0249 /* Pods-Recycle CanTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Recycle CanTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		10D4D2CC67E8A11565D18888605C2B69 /* Pods-Recycle Can-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Recycle Can-dummy.m"; sourceTree = "<group>"; };
 		1117A6D1FE68A6F983D560933AF5E265 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		1315BBF83E909E6D5A68C22091F66760 /* Pods-Recycle CanUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Recycle CanUITests.modulemap"; sourceTree = "<group>"; };
+		1315BBF83E909E6D5A68C22091F66760 /* Pods-Recycle CanUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Recycle CanUITests.modulemap"; sourceTree = "<group>"; };
 		154CD0B8DC95EB88618827C12D6B5C0F /* Pods-Recycle CanUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Recycle CanUITests-dummy.m"; sourceTree = "<group>"; };
 		2039E435CB416E162DF29C82614DF4AC /* Pods-Recycle Can-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Recycle Can-frameworks.sh"; sourceTree = "<group>"; };
 		2871B2CB3AD532973473892CF9BB932F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28A8AD5F49405B7BABA73EE8E58843FD /* Pods-Recycle CanTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Recycle CanTests-frameworks.sh"; sourceTree = "<group>"; };
 		331153488AECE6CB0361E781152B9F92 /* Pods-Recycle CanUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Recycle CanUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		39767CAB4057669792861B810D9F92C8 /* Pods-Recycle CanTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Recycle CanTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3A56378DC0512BF83C6E96EFAF6369AE /* Pods_Recycle_CanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Recycle_CanUITests.framework; path = "Pods-Recycle CanUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A56378DC0512BF83C6E96EFAF6369AE /* Pods_Recycle_CanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recycle_CanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E311B06DC0172A76C2236B3C4C76F6E /* Pods-Recycle CanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Recycle CanUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4AC30CF9334CEA7D24AFE223B92C5DD9 /* Pods-Recycle Can.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Recycle Can.modulemap"; sourceTree = "<group>"; };
+		4AC30CF9334CEA7D24AFE223B92C5DD9 /* Pods-Recycle Can.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Recycle Can.modulemap"; sourceTree = "<group>"; };
 		58CA5AF263AB31713B7D0FF00162C3D8 /* Pods-Recycle Can-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Recycle Can-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B0A1BF0D6CB7F488A1F042E3FD3117F /* Pods-Recycle CanUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Recycle CanUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5FA2A900F4F4FD88948E93A253710BA3 /* Pods-Recycle CanUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Recycle CanUITests-resources.sh"; sourceTree = "<group>"; };
 		64713BC36193D6ABC15A8046D5843A23 /* Pods-Recycle Can.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Recycle Can.debug.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69DA3FFCD89E0333C436FA5DF06A527C /* Pods-Recycle CanTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Recycle CanTests-dummy.m"; sourceTree = "<group>"; };
-		7A97CD32B39392FF709C9335886AD172 /* Pods-Recycle CanTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Recycle CanTests.modulemap"; sourceTree = "<group>"; };
+		7A97CD32B39392FF709C9335886AD172 /* Pods-Recycle CanTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Recycle CanTests.modulemap"; sourceTree = "<group>"; };
 		8BCCCA295DEE22197B0C283775AB5A26 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		8CAE96ACBFF47F7D02ADE7FF79391E54 /* Pods-Recycle CanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Recycle CanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D36068C915B9FF806FFD1E34C9A025B /* Pods-Recycle CanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Recycle CanTests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		955D3A22EB34AB333524A949DC729F6B /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		99B5B5F6D3496E3ED42812F1446AAE72 /* Pods-Recycle CanUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Recycle CanUITests-frameworks.sh"; sourceTree = "<group>"; };
-		9ECCA3FE40EAC9234F61A1D8C0C8EB39 /* Pods_Recycle_Can.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Recycle_Can.framework; path = "Pods-Recycle Can.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ECCA3FE40EAC9234F61A1D8C0C8EB39 /* Pods_Recycle_Can.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recycle_Can.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1243609FDDCACFB90FB56572BBD7FB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA45149F693394962969F7F8DE3DE9F1 /* Pods_Recycle_CanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Recycle_CanTests.framework; path = "Pods-Recycle CanTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA45149F693394962969F7F8DE3DE9F1 /* Pods_Recycle_CanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recycle_CanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B497938825266E2E957424C8A0FE7875 /* Pods-Recycle Can-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Recycle Can-acknowledgements.plist"; sourceTree = "<group>"; };
 		C0CDDA950597D1EE17902D31C7623C10 /* Pods-Recycle CanUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Recycle CanUITests-umbrella.h"; sourceTree = "<group>"; };
 		C3CE0BB3D95BAF82216CFFD8B2138C26 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,7 +98,6 @@
 				8BA44F82F96D164DA342FB09A0BEE150 /* Frameworks */,
 				9595338FF99D6E406412D70BB160C308 /* Resources */,
 			);
-			name = GooglePlaces;
 			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
@@ -267,7 +266,6 @@
 				9C0A1FBBD02B7528347BC7FB84DE24F5 /* Frameworks */,
 				9335B78F64E389AD6BD28E5033911D2C /* Resources */,
 			);
-			name = GooglePlacePicker;
 			path = GooglePlacePicker;
 			sourceTree = "<group>";
 		};
@@ -295,7 +293,6 @@
 				8FFA7EAE118844748AD9685060A6B673 /* Base */,
 				7A999BD5B4C2C01904FC59776164FBE1 /* Maps */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -541,8 +538,11 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Recycle Can/Info.plist";
+				INSTALL_GROUP = "";
+				INSTALL_MODE_FLAG = "";
+				INSTALL_OWNER = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Recycle Can/Pods-Recycle Can.modulemap";
@@ -613,8 +613,11 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Recycle Can/Info.plist";
+				INSTALL_GROUP = "";
+				INSTALL_MODE_FLAG = "";
+				INSTALL_OWNER = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Recycle Can/Pods-Recycle Can.modulemap";
