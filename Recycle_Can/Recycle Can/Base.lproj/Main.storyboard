@@ -286,7 +286,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-pt-VgO">
                                 <rect key="frame" x="23" y="252" width="368" height="34"/>
-                                <string key="text">Email: support@Recyclecan.ca 
+                                <string key="text">Email: info@recyclecan.ca 
 Website: www.recyclecan.ca</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
