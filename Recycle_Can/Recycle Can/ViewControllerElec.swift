@@ -70,7 +70,7 @@ class ViewControllerElec: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+//        locationManager.startUpdatingLocation()
         
         switch CLLocationManager.authorizationStatus() {
         case  .restricted, .denied:
@@ -508,7 +508,7 @@ extension ViewControllerElec : CLLocationManagerDelegate {
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         print("locationManger didupdatelocations", myUserLatitude, myUserLongitude)
-//        mapView.setRegion(region, animated: false)
+        mapView.setRegion(region, animated: true)
         
     }
     
@@ -568,9 +568,10 @@ extension ViewControllerElec : MKMapViewDelegate {
             let polyline = overlay
             let polyLineRenderer = MKPolylineRenderer(overlay: polyline as! MKOverlay)
             // draw the track
-            
+            polyLineRenderer.lineDashPhase = 16
+            polyLineRenderer.lineDashPattern = [10, 7, 10, 7]
             polyLineRenderer.strokeColor = UIColor(red:0.23, green:0.57, blue:0.95, alpha:0.9)
-            polyLineRenderer.lineWidth = 6.0
+            polyLineRenderer.lineWidth = 4.0
             
             
             return polyLineRenderer
@@ -585,6 +586,8 @@ extension ViewControllerElec : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         
         guard !(annotation is MKUserLocation) else { return nil }
+        
+        
         let reuseId = "pin"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         if pinView == nil {
