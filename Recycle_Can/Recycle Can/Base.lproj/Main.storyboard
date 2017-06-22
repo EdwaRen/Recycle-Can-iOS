@@ -245,6 +245,17 @@
                                     <action selector="cancelOverlay:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="p8Z-kI-GKv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ia-4q-n6W">
+                                <rect key="frame" x="69" y="465" width="35" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="mEh-Ve-XOn"/>
+                                    <constraint firstAttribute="height" constant="34" id="zMs-i1-fo6"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="expand"/>
+                                <connections>
+                                    <action selector="expandOverlay:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="261-Sf-J9p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -260,12 +271,14 @@
                             <constraint firstItem="AWQ-zi-4jd" firstAttribute="centerX" secondItem="amk-pH-0qu" secondAttribute="centerX" id="UTM-PA-eGp"/>
                             <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="3UT-Cj-T1g" secondAttribute="bottom" constant="24" id="WYP-G2-g2f"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="eZZ-XD-fSd"/>
+                            <constraint firstItem="6ia-4q-n6W" firstAttribute="leading" secondItem="RTV-QC-PIQ" secondAttribute="trailing" constant="11" id="ecg-Zk-EQJ"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="fOc-X0-wdm"/>
                             <constraint firstItem="AWQ-zi-4jd" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" id="gkU-Lf-C6X"/>
                             <constraint firstItem="RTV-QC-PIQ" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leadingMargin" constant="7" id="sQQ-UG-uUe"/>
                             <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="Qn4-3Z-fPs" secondAttribute="bottom" constant="9" id="tPg-yz-NDa"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="vYg-NH-ISS"/>
                             <constraint firstItem="amk-pH-0qu" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="xGJ-Ns-1ja"/>
+                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="6ia-4q-n6W" secondAttribute="bottom" constant="20" id="yl7-fW-IF9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tP4-wz-ZBh"/>
@@ -275,6 +288,7 @@
                         <outlet property="distanceBackground" destination="81P-jg-rDy" id="oju-HD-DTF"/>
                         <outlet property="distanceLabel" destination="3UT-Cj-T1g" id="r5n-86-0Rp"/>
                         <outlet property="eButton" destination="kSR-az-k6z" id="On4-ke-Puy"/>
+                        <outlet property="expandButton" destination="6ia-4q-n6W" id="ndB-ge-RnX"/>
                         <outlet property="mapView" destination="AWQ-zi-4jd" id="ei4-tk-3mZ"/>
                         <outlet property="pButton" destination="0qJ-K0-BFP" id="TL4-o7-ZOX"/>
                         <outlet property="pinchButton" destination="bel-TZ-tFE" id="VuL-ZF-z4R"/>
@@ -536,6 +550,7 @@ Website: www.recyclecan.ca</string>
     <resources>
         <image name="Recycle_Can" width="1650" height="550"/>
         <image name="cancel2" width="256" height="256"/>
+        <image name="expand" width="256" height="256"/>
         <image name="house@1x" width="25" height="25"/>
         <image name="myLocation" width="256" height="256"/>
         <image name="nav" width="30" height="30"/>
