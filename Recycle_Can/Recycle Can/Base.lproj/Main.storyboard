@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -30,11 +30,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xUy-Nn-j1K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KPE-65-Sjj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuD-5H-r5H">
-                                <rect key="frame" x="77" y="233" width="243" height="76"/>
+                                <rect key="frame" x="81" y="401" width="333" height="76"/>
                                 <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="8Gm-Ra-W7b"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N86-1N-yhX">
-                                <rect key="frame" x="77" y="317" width="243" height="76"/>
+                                <rect key="frame" x="81" y="485" width="333" height="76"/>
                                 <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="ckF-ua-Ra2"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-Id-BYA">
-                                <rect key="frame" x="77" y="401" width="243" height="76"/>
+                                <rect key="frame" x="81" y="569" width="333" height="76"/>
                                 <color key="backgroundColor" red="0.26697409152984619" green="0.69155025482177734" blue="0.35868808627128601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="7gO-iY-5Zg"/>
@@ -76,10 +76,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recycle_Can" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-9o-Lc5">
-                                <rect key="frame" x="0.0" y="28" width="320" height="148"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="316"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5au-l2-ufM">
-                                <rect key="frame" x="16" y="171" width="288" height="46"/>
+                                <rect key="frame" x="20" y="339" width="374" height="46"/>
                                 <string key="text">Canada's Largest Collection of Household Hazardous Waste Disposal Locations. 
 </string>
                                 <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="13"/>
@@ -143,17 +143,17 @@
                         <viewControllerLayoutGuide type="bottom" id="q8x-9K-Gbc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="exx-7T-I8y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-zi-4jd">
-                                <rect key="frame" x="0.0" y="64" width="319" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="412.66666666666669" height="623"/>
                                 <connections>
                                     <outlet property="delegate" destination="ajO-rO-Xeo" id="2T7-R5-BBA"/>
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="amk-pH-0qu">
-                                <rect key="frame" x="7.5" y="72" width="305" height="36"/>
+                                <rect key="frame" x="54.666666666666657" y="72" width="305" height="36"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-az-k6z">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="36"/>
@@ -196,7 +196,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn4-3Z-fPs">
-                                <rect key="frame" x="131.5" y="456" width="57" height="54"/>
+                                <rect key="frame" x="178.66666666666666" y="624" width="57" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="9VH-HW-ivE"/>
                                     <constraint firstAttribute="height" constant="54" id="sn4-FF-s3s"/>
@@ -209,47 +209,60 @@
                                     <action selector="userLocationButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="Vee-gg-eig"/>
                                 </connections>
                             </button>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81P-jg-rDy">
-                                <rect key="frame" x="204" y="462" width="116" height="41"/>
+                            <view alpha="0.050000000000000003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81P-jg-rDy">
+                                <rect key="frame" x="294" y="630" width="100" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-Cj-T1g">
+                                        <rect key="frame" x="8" y="7" width="84" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="f1Z-w8-aNV"/>
+                                            <constraint firstAttribute="height" constant="26" id="fUE-pX-lgv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="5Lf-JV-oV0"/>
-                                    <constraint firstAttribute="width" constant="116" id="zgP-7v-BxD"/>
+                                    <constraint firstItem="3UT-Cj-T1g" firstAttribute="trailing" secondItem="81P-jg-rDy" secondAttribute="trailingMargin" id="9w2-5b-0hW"/>
+                                    <constraint firstItem="3UT-Cj-T1g" firstAttribute="bottom" secondItem="81P-jg-rDy" secondAttribute="bottomMargin" id="G0o-6t-YCB"/>
+                                    <constraint firstAttribute="height" constant="41" id="SeI-KD-9hN"/>
+                                    <constraint firstAttribute="width" constant="100" id="Tsh-fs-Rn5"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="bel-TZ-tFE">
-                                <rect key="frame" x="80" y="204" width="160" height="160"/>
+                                <rect key="frame" x="127" y="288" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="2Eg-NN-lNO"/>
                                     <constraint firstAttribute="height" constant="160" id="WK0-To-aUW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-Cj-T1g">
-                                <rect key="frame" x="188" y="469" width="116" height="26"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9D-gq-Y6k">
+                                <rect key="frame" x="78" y="406" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="titleEdgeInsets" minX="-119" minY="37" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Go" image="car4">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-QC-PIQ">
+                                <rect key="frame" x="359" y="588" width="35" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="HVt-ad-Sgz"/>
-                                    <constraint firstAttribute="height" constant="26" id="ilQ-BN-zgJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-QC-PIQ">
-                                <rect key="frame" x="23" y="465" width="35" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="L09-rJ-z57"/>
-                                    <constraint firstAttribute="width" constant="35" id="NPY-Nc-vZK"/>
+                                    <constraint firstAttribute="width" constant="35" id="K84-YB-rcM"/>
+                                    <constraint firstAttribute="height" constant="34" id="YYR-ZZ-y0c"/>
                                 </constraints>
                                 <state key="normal" image="cancel2"/>
                                 <connections>
                                     <action selector="cancelOverlay:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="p8Z-kI-GKv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ia-4q-n6W">
-                                <rect key="frame" x="69" y="465" width="35" height="34"/>
+                            <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ia-4q-n6W">
+                                <rect key="frame" x="359" y="546" width="35" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="mEh-Ve-XOn"/>
-                                    <constraint firstAttribute="height" constant="34" id="zMs-i1-fo6"/>
+                                    <constraint firstAttribute="height" constant="34" id="97z-rE-jqg"/>
+                                    <constraint firstAttribute="width" constant="35" id="uu1-KT-SBc"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="expand"/>
                                 <connections>
@@ -259,26 +272,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="81P-jg-rDy" secondAttribute="bottom" constant="16" id="5OC-Qi-4vd"/>
                             <constraint firstItem="amk-pH-0qu" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" constant="8" symbolic="YES" id="6JU-qO-kdX"/>
                             <constraint firstItem="AWQ-zi-4jd" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leading" id="7Qk-YF-WsO"/>
                             <constraint firstItem="AWQ-zi-4jd" firstAttribute="bottom" secondItem="q8x-9K-Gbc" secondAttribute="top" id="Gzv-yc-CxI"/>
-                            <constraint firstItem="3UT-Cj-T1g" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="HNE-KN-dO9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="81P-jg-rDy" secondAttribute="trailing" constant="-16" id="Mwn-uR-IlU"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="PDk-dh-VF5"/>
-                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="RTV-QC-PIQ" secondAttribute="bottom" constant="20" id="PuI-S7-Bsz"/>
                             <constraint firstItem="Qn4-3Z-fPs" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="RCa-mn-ro5"/>
+                            <constraint firstItem="6ia-4q-n6W" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="RZV-BF-ReI"/>
                             <constraint firstItem="AWQ-zi-4jd" firstAttribute="centerX" secondItem="amk-pH-0qu" secondAttribute="centerX" id="UTM-PA-eGp"/>
-                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="3UT-Cj-T1g" secondAttribute="bottom" constant="24" id="WYP-G2-g2f"/>
+                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="81P-jg-rDy" secondAttribute="bottom" constant="16" id="cIS-PW-YhW"/>
+                            <constraint firstItem="RTV-QC-PIQ" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="eQc-GA-S1j"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="eZZ-XD-fSd"/>
-                            <constraint firstItem="6ia-4q-n6W" firstAttribute="leading" secondItem="RTV-QC-PIQ" secondAttribute="trailing" constant="11" id="ecg-Zk-EQJ"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="fOc-X0-wdm"/>
                             <constraint firstItem="AWQ-zi-4jd" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" id="gkU-Lf-C6X"/>
-                            <constraint firstItem="RTV-QC-PIQ" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leadingMargin" constant="7" id="sQQ-UG-uUe"/>
+                            <constraint firstItem="RTV-QC-PIQ" firstAttribute="top" secondItem="6ia-4q-n6W" secondAttribute="bottom" constant="8" id="rfH-Cl-1Uj"/>
+                            <constraint firstItem="81P-jg-rDy" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="slB-qu-g4G"/>
                             <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="Qn4-3Z-fPs" secondAttribute="bottom" constant="9" id="tPg-yz-NDa"/>
                             <constraint firstItem="bel-TZ-tFE" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="vYg-NH-ISS"/>
                             <constraint firstItem="amk-pH-0qu" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="xGJ-Ns-1ja"/>
-                            <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="6ia-4q-n6W" secondAttribute="bottom" constant="20" id="yl7-fW-IF9"/>
+                            <constraint firstItem="81P-jg-rDy" firstAttribute="top" secondItem="RTV-QC-PIQ" secondAttribute="bottom" constant="8" id="xyQ-u3-thX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tP4-wz-ZBh"/>
@@ -307,37 +318,37 @@
                         <viewControllerLayoutGuide type="bottom" id="cMp-7c-cKM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M4A-V7-PUs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlC-0f-W6B">
-                                <rect key="frame" x="19" y="60.5" width="288" height="117"/>
+                                <rect key="frame" x="23" y="60.333333333333329" width="374" height="83.666666666666671"/>
                                 <string key="text">Recycle Can is a project that provides Canadians with a locator to find approved locations to safely dispose of electronics, batteries, and paint. This is to prevent potentially hazardous lead, arsenic, and toxic fumes from leaking out into the environment.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0U-Xj-QjC">
-                                <rect key="frame" x="19" y="29" width="288" height="28.5"/>
+                                <rect key="frame" x="23" y="29.000000000000004" width="374" height="28.333333333333339"/>
                                 <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McA-D7-Yzk">
-                                <rect key="frame" x="19" y="191.5" width="282" height="28.5"/>
+                                <rect key="frame" x="23" y="158" width="368" height="28.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-3d-7di">
-                                <rect key="frame" x="19" y="225" width="282" height="67"/>
+                                <rect key="frame" x="23" y="191.33333333333334" width="368" height="50.333333333333314"/>
                                 <string key="text">We are constantly updating the locations of approved recycling locations throughout Canada. Please contact us if there are any personal and business inquiries</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-pt-VgO">
-                                <rect key="frame" x="19" y="300" width="282" height="33.5"/>
+                                <rect key="frame" x="23" y="249.66666666666669" width="368" height="33.666666666666686"/>
                                 <string key="text">Email: info@recyclecan.ca 
 Website: www.recyclecan.ca</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -345,7 +356,7 @@ Website: www.recyclecan.ca</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recycle_Can" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-yK-iPh">
-                                <rect key="frame" x="5" y="416" width="240" height="98"/>
+                                <rect key="frame" x="5" y="584" width="240" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Cb-yK-iPh" secondAttribute="height" multiplier="120:49" id="ReN-rg-DWe"/>
                                     <constraint firstAttribute="height" constant="98" id="qpW-nd-ygO"/>
@@ -353,7 +364,7 @@ Website: www.recyclecan.ca</string>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="3Rh-9p-dlT">
-                                <rect key="frame" x="19" y="383" width="174" height="30"/>
+                                <rect key="frame" x="23" y="332.66666666666669" width="174" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-sX-Lvf">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -406,7 +417,7 @@ Website: www.recyclecan.ca</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez8-Ah-q0F">
-                                <rect key="frame" x="19" y="346.5" width="282" height="28.5"/>
+                                <rect key="frame" x="23" y="296.33333333333331" width="368" height="28.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -467,26 +478,26 @@ Website: www.recyclecan.ca</string>
             <objects>
                 <tableViewController storyboardIdentifier="LocationSearchTable" id="xbI-d0-B8k" customClass="LocationSearchTable" customModule="Recycle_Can" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="v8N-1E-bfI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Gdf-cO-0wH" detailTextLabel="PqF-MG-gHq" style="IBUITableViewCellStyleSubtitle" id="4BE-XK-w5R">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4BE-XK-w5R" id="ssK-SN-eVc">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gdf-cO-0wH">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15.000000000000002" y="6" width="31.666666666666668" height="19.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PqF-MG-gHq">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="14.999999999999996" y="25.333333333333332" width="40.666666666666664" height="13.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -550,6 +561,7 @@ Website: www.recyclecan.ca</string>
     <resources>
         <image name="Recycle_Can" width="1650" height="550"/>
         <image name="cancel2" width="256" height="256"/>
+        <image name="car4" width="120" height="120"/>
         <image name="expand" width="256" height="256"/>
         <image name="house@1x" width="25" height="25"/>
         <image name="myLocation" width="256" height="256"/>

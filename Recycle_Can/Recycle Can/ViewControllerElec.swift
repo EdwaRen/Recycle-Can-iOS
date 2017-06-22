@@ -60,7 +60,7 @@ class ViewControllerElec: UIViewController {
         defaults.set(1000.0, forKey: "userLatitude")
         
         //Sets the zoom level and location of the initial map (parliament hill)
-        let span = MKCoordinateSpanMake(0.3, 0.3)
+        let span = MKCoordinateSpanMake(0.1, 0.1)
         let startLocation = CLLocationCoordinate2DMake(45.4236, -75.7009)
         let region = MKCoordinateRegionMake(startLocation, span)
         mapView.setRegion(region, animated: false)
@@ -76,7 +76,7 @@ class ViewControllerElec: UIViewController {
         case  .restricted, .denied:
             let alertController = UIAlertController(
                 title: "Location Access Disabled",
-                message: "To go to your current location, please open this app in settings under 'privacy' and set location access to 'Always'.",
+                message: "To go to your current location, please open this app in settings under 'privacy' and set location access to 'While Using the App'.",
                 preferredStyle: .alert)
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -267,7 +267,7 @@ class ViewControllerElec: UIViewController {
     }
     
     func fadeOut(myView: UIImageView) {
-        myView.alpha = 0.7
+//        myView.alpha = 0.7
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(realFadeOut), userInfo: nil, repeats: false)
         
         
@@ -549,9 +549,9 @@ extension ViewControllerElec : MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print("Zoom: \(mapView.getZoomLevel())")
-//        if mapView.getZoomLevel() < 8 {
-//            mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 8, animated: true)
-//        }
+        if mapView.getZoomLevel() < 8 {
+            mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 8, animated: true)
+        }
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -596,16 +596,28 @@ extension ViewControllerElec : MKMapViewDelegate {
             // Fallback on earlier versions
         }
         pinView?.canShowCallout = true
-        let smallSquare = CGSize(width: 40, height: 40)
+        let smallSquare = CGSize(width: 50, height: 50)
         let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-        button.setBackgroundImage(UIImage(named: "car4.png"), for: UIControlState())
-        button.setBackgroundImage(UIImage(named: "car4.png"), for: .selected)
+        button.setImage(UIImage(named: "car4.png"), for: UIControlState())
+        button.setImage(UIImage(named: "car4.png"), for: .selected)
+        button.setTitle("Go", for: .selected)
+        button.setTitle("Go", for: .normal)
+        button.setTitle("Go", for: .highlighted)
+        button.titleEdgeInsets = UIEdgeInsets(top: 37,left: -119,bottom: 0,right: 0)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Raleway-Regular", size: 15)
+        button.titleLabel?.text = "Go"
+        button.imageEdgeInsets = UIEdgeInsetsMake(-5, 0, 5, 0)
+
+
+
         button.alpha = 0.9
         //
         //        [button, setImage,:[UIImage imageNamed:@"pressed.png"] forState:UIControlStateSelected | UIControlStateHighlighted];
         button.accessibilityHint = String(Double(annotation.coordinate.latitude))
         button.accessibilityLabel = String(Double(annotation.coordinate.longitude))
         button.accessibilityValue = annotation.title!
+        
         
         button.addTarget(self, action: #selector(ViewControllerElec.getDirections(sender:)), for:.touchUpInside)
         
@@ -707,8 +719,8 @@ extension ViewControllerElec : MKMapViewDelegate {
                 distance = distance/100.0
                 distance.round()
                 distance = distance/10.0
-                UIView.animate(withDuration: 1, animations: {
-                    self.distanceBackground.backgroundColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:0.9)
+                UIView.animate(withDuration: 0.7, animations: {
+                    self.distanceBackground.backgroundColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0)
                     self.distanceBackground.alpha = 0.9
                     self.distanceLabel.text = String(Double(distance)) + " km"
                     self.cButton.alpha = 0.9
@@ -739,7 +751,7 @@ extension ViewControllerElec : MKMapViewDelegate {
     
     func removeOverlays() {
         
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             let myOverlays = self.mapView.self.overlays
             self.mapView.self.removeOverlays(myOverlays)
             

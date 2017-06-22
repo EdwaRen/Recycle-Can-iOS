@@ -133,6 +133,7 @@
 		1FB3F7D81EE67CB900DD3AF7 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		1FB3F7D91EE67CB900DD3AF7 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		1FB3F7DA1EE67CB900DD3AF7 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		1FBB50671EFC4182009B2D57 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		1FBD8D811EF0CB88001FAB8D /* ViewControllerAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAbout.swift; sourceTree = "<group>"; };
 		1FC0D8B21EE63A02004BFEB8 /* ViewControllerBat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerBat.swift; path = Images/ViewControllerBat.swift; sourceTree = "<group>"; };
 		1FC156131EE3899300F44611 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
@@ -226,6 +227,7 @@
 			children = (
 				1FC156151EE3BF1400F44611 /* New Group */,
 				1F38901D1EE1A8CC0039BCFD /* AppDelegate.swift */,
+				1FBB50671EFC4182009B2D57 /* Raleway-Regular.ttf */,
 				1F38901F1EE1A8CC0039BCFD /* FirstViewController.swift */,
 				1F3890211EE1A8CC0039BCFD /* SecondViewController.swift */,
 				1F72C5581EE4BF7800C37751 /* ViewControllerElec.swift */,
