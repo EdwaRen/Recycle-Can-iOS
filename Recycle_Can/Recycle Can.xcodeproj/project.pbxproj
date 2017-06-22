@@ -113,7 +113,6 @@
 		1F3890411EE1A8CC0039BCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F72C5581EE4BF7800C37751 /* ViewControllerElec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerElec.swift; sourceTree = "<group>"; };
 		1F72C55A1EE4BFA000C37751 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
-		1F72C55C1EE5344200C37751 /* Ottawa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ottawa.gpx; sourceTree = "<group>"; };
 		1F7E76931EE4702100C4777E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1FB3F7C81EE67CB900DD3AF7 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		1FB3F7C91EE67CB900DD3AF7 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
@@ -240,7 +239,6 @@
 				1F3442DC1EE1F35D009BB7BB /* AllLocations.swift */,
 				1FC156131EE3899300F44611 /* PinAnnotation.swift */,
 				1F72C55A1EE4BFA000C37751 /* LocationSearchTable.swift */,
-				1F72C55C1EE5344200C37751 /* Ottawa.gpx */,
 			);
 			path = "Recycle Can";
 			sourceTree = "<group>";

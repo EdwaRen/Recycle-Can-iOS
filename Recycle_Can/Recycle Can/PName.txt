@@ -941,3 +941,290 @@ Mid Canada Environmental Services Ltd.
 RONA Building Centre
 Regional Recycling Nanaimo - Old Victoria Road
 Semiahmoo Bottle Depot
+Acadia Valley Waste Management Site
+Acme Transfer Station
+Alliance Transfer Station
+Amisk Transfer Station
+Anselmo Transfer Station
+Ardmore Landfill
+Ashmont Transfer Station
+Athabasca Transfer Site and Recycle Facility
+Barrhead Regional Landfill
+Bassano Transfer Station
+Bear Canyon Transfer Station
+Bearhills Lake Transfer Station
+Beaver Lake Landfill
+Bellis Transfer Station
+Turner Valley/Black Diamond Transfer Station
+Blueberry Mountain Transfer Station
+Bluehills Waste Transfer Station
+Blumenort Waste Transfer Station
+Bonanza Transfer Station
+North Forty Mile Regional Sanitary Landfill
+Boyle Landfill and Recycle Site
+Breton Waste Transfer Site
+Newell Regional Landfill
+Buffalo Head Waste Transfer Station
+Buffalo Lake Metis Settlement Landfill
+Cadotte Lake Transfer Station
+Calling Lake Transfer Station
+West Dried Meat Lake Regional Landfill
+Caroline Transfer Station
+Carseland Transfer Station
+Castor Transfer Station
+Champion/Carmangay Transfer Station
+CUI - Recycle Depot
+Chipewyan Lake Transfer Station
+Clairmont Recycling and Waste Management Centre
+Willow Creek Class II Landfill
+Clear Prairie Transfer Station
+Cleardale Transfer Station
+Cluny Transfer Station
+Coaldale Transfer Station
+Cold Lake Transfer Station
+Colinton Transfer Site
+Conklin Transfer Station
+Consort Waste Transfer Site and Recycling Centre
+Coronation Transfer Station
+Cow Lake Transfer Station
+Craigend Transfer Station
+Craigmyle Transfer Station
+Crammond Transfer Station
+Crossroads Transfer Station
+Crowsnest-Pincher Creek Landfill
+Cynthia Transfer Site
+Daysland Transfer Station
+DeBolt Transfer Station
+Deerhill/David Thompson Transfer Station
+Demmitt Transfer Station
+Derwent Transfer Station
+Dewberry Transfer Station
+Mountain View RWMC Landfill (Didsbury Landfill)
+Dixonville Transfer Station
+Doris Creek Transfer Station
+Drumheller & District Regional Landfill
+Dunmore Transfer Station
+Transfer Site
+Elinor Lake Transfer Station
+Elk Point Transfer Station
+Elkwater Transfer Station
+Elmworth Transfer Station
+Enchant Transfer Station
+Etzikom Transfer Site
+Eureka River Transfer Station
+Everdell Transfer Station
+North Peace Regional Landfill
+Smoky River Regional Landfill
+Faraway Transfer Station
+Faust-Kinuso Transfer Station
+North Recycling Yard
+Flatbush Transfer Station
+Foremost Transfer Site
+Forestburg Transfer Station
+Fort Chipewyan Landfill
+Fort Kent Transfer Station
+R.M. of Wood Buffalo Regional Landfill
+Galahad Transfer Station
+Gem Transfer Station
+Gift Lake Transfer Station
+Gleichen Transfer Station
+Goodridge Landfill
+Goose Lake Transfer Station
+Grande Cache Landfill
+West Grande Prairie Regional Landfill
+Grassland Transfer Site and Recycle Facility
+Grassy Lake Transfer Station
+Grouard Transfer Station
+Grovedale Transfer Station
+Gwynne Modified Landfill Site
+Hairy Hill Transfer Station
+Halkirk Transfer Station
+Hanna Waste Transfer Site and Recycling Centre
+Hardisty Transfer Station
+Harmon Valley Transfer Station
+Hays Transfer Station
+Heart River Transfer Station
+Heisler Transfer Station
+Mackenzie Regional Landfill
+Banana Belt Landfill Site
+High Prairie & District Regional Landfill
+Foothills Regional Landfill
+Hilda Transfer Station
+Hilda Lake Landfill
+Hilgartner Solid Waste Transfer Station
+Hines Creek Transfer Station
+West Yellowhead Regional Landfill
+Horn Hill Waste Transfer Station
+Hughenden Transfer Site
+Hussar Transfer Station
+Hylo Transfer Station
+Iron Springs Transfer Station
+Irricana Transfer Site and Recycle Depot
+Irvine Transfer Station
+Janvier Transfer Station
+Jasper Transfer Station
+Joussard Transfer Station
+Kapasiwin Waste Transfer Station
+Keephills Waste Transfer Station
+Killam Transfer Station
+Kitscoty Transfer Station
+La Corey Landfill
+Evergreen Regional Landfill Site
+Lakedell Modified Landfill
+Lakedell School
+Leduc Regional Landfill
+Leslieville Transfer Station
+Lethbridge Waste and Recycling Centre (Regional Landfill)
+Lindbrook Transfer Station
+Linden Transfer Station
+Little Buffalo Transfer Station
+Little Smoky Transfer Station
+Lloydminster Landfill
+Lodgepole Transfer Site
+Lomond Transfer Station
+Long Lake Transfer Station
+Lougheed Transfer Station
+SASH Recycling Centre
+Mallaig Transfer Station
+Manning Transfer Station
+Marie Reine Transfer Station
+Marwayne Transfer Station
+Louis Bull Tribe Transfer Station
+Mayerthorpe Transfer Station
+Medicine Hat Municipal Landfill
+Michichi Transfer Station
+Milk River/Coutts Transfer Station
+East Millet Transfer Station
+Millicent Transfer Station
+Milo Transfer Station
+East Regional Waste Transfer Station
+Moon Lake Waste Transfer Station
+Alexander First Nation Waste Transfer Station
+Roseridge Landfill
+Morley Transfer Station
+Arrowwood/Mossleigh Transfer Station
+Mulhurst Modified Landfill
+Munson Transfer Station
+Muriel Lake Transfer Station
+Myrnam Transfer Station
+Nampa Transfer Station
+New Fish Creek Transfer Station
+New Sarepta Waste Transfer Station
+Nobleford Transfer Station
+Nordegg Transfer Station
+Onoway Public Works
+Orion Landfill
+Owl River Transfer Station
+Paradise Valley Transfer Station
+Parkcourt Transfer Station
+Peace Hills Solid Waste Transfer Station
+East Peace Regional Company Landfill
+Peerless Lake Transfer Station
+Peers Transfer Station
+Perryvale Transfer Site and Recycle Facility
+Picture Butte Transfer Station
+Plamondon Landfill
+Town of Ponoka Transfer Station
+Prentiss Landfill and Transfer Station
+Priddis Transfer Station
+Provost Regional Landfill
+Puskwaskau Transfer Station
+Rainbow Lake Waste Transfer Station
+Rainier/Scandia Transfer Station
+Ranfurly Waste Transfer Station
+Red Earth Creek Landfill
+Redcliff Regional Landfill
+Redwater Waste Transfer Station
+Reno Transfer Station
+Rich Lake Transfer Station
+Rockyford Transfer Station
+Rockylane Waste Transfer Station
+Rosalind Transfer Station
+Rosebud Transfer Station
+Royce Transfer Station
+Rumsey Transfer Station
+Beaver Regional Landfill
+Saddle Lake Landfill
+Sandy Lake Transfer Station
+Highway 43 East Waste Regional Landfill
+Schuler Transfer Station
+Seba Beach Waste Transfer Station
+Flagstaff Regional Landfill
+Sedgewick Transfer Station
+Seven Persons Transfer Station
+Skiff Transfer Site
+Lesser Slave Lake Regional Waste Management Facility
+Smith Transfer Station
+Smoky Lake Transfer Station
+South Wapiti Transfer Station
+Spedden Transfer Station
+St. Edouard Transfer Station
+St. Lina Transfer Station
+St. Michael Regional Landfill
+St. Paul Transfer Station
+Standard Transfer Station
+Stettler Transfer Station
+Stirling Transfer Station
+Parkland County Transfer Station & Recycle Centre
+Strathmore Transfer Station
+Strome Transfer Station
+Sturgeon Heights Transfer Station
+SLCN Waste Transfer Station
+Suffield Transfer Station
+Sundre Transfer Station
+Sunnybrook Waste Transfer Station
+Sunset House Transfer Station
+Town of Swan Hills Transfer Site
+Sweathouse Transfer Station
+Sylvan Lake Waste Transfer Station
+Taber Transfer Station
+Tangent Landfill
+Teepee Creek Transfer Station
+Therien Landfill
+Thorhild Transfer Station
+Three Hills Transfer Station
+Tilley Transfer Station
+Tomahawk Waste Transfer Station
+Kneehill County Waste Recovery Site (Torrington)
+Trochu Transfer Station
+Trout Lake Transfer Station
+Two Hills Regional Landfill
+Vegreville Sanitary Landfill
+Vermilion Regional Transfer Station
+Vilna Transfer Station
+Vincent Lake Transfer Station
+Violet Grove Transfer Site
+Vulcan Transfer Station and Recycle Facility
+Wabasca Landfill
+Walsh Transfer Station
+Wandering River Transfer Station
+Wanham Transfer Site
+Warner Transfer Station
+Waskatenau Transfer Station
+Water Valley Transfer Station
+Weberville Transfer Station
+West Buck Lake Transfer Station
+Westlock Regional Landfill
+Whispering Hills Transfer Station
+Whitecourt Transfer Station
+Whitelaw/Deer Hill Transfer Station
+Whitney Lake Transfer Station
+Wildwood Transfer Station
+Willingdon Transfer Station
+Winfield Transfer Station
+Worsley Transfer Station
+Zama Waste Transfer Station
+(NE Calgary) #31 Fire Station (Country Hills)
+(NE Calgary) #4 Fire Station (Vista Heights)
+(NW Calgary) #17 Fire Station (Varsity)
+(NW Calgary) Spyhill Landfill
+(SE Calgary) East Calgary Landfill
+(SE Calgary) Shepard Landfill
+(SW Calgary) #20 Fire Station (Lincoln Park)
+(SW Calgary) #24 Fire Station (Cedarbrae)
+(SW Calgary) #37 Fire Station (Evergreen)
+(NE Edmonton) Edmonton Waste Management Center
+(NE Edmonton) Kennedale Eco Station
+(NW Edmonton) Coronation Eco Station
+(SE Edmonton) Strathcona Eco Station
+(SW Edmonton) Ambleside Eco Station

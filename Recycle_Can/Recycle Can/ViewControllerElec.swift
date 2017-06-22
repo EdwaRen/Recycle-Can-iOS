@@ -14,27 +14,43 @@ import CoreLocation
 protocol HandleMapSearch: class {
     func dropPinZoomIn(_ placemark:MKPlacemark)
 }
+var myCount = 0
+var myUserLatitude: Double = 1000.0
+var myUserLongitude: Double = 1000.0
+
 
 class ViewControllerElec: UIViewController {
+    var locationArray: [(textField: UITextField?, mapItem: MKMapItem?)]!
+    
+    @IBOutlet weak var distanceBackground: UIView!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     var selectedPin: MKPlacemark?
     var resultSearchController: UISearchController!
     let locationManager = CLLocationManager()
     
+    var closestPinDistance = [99999999.9, 99999999.9, 9999999.9]
+    var closestPinCoordinates = [CLLocationCoordinate2D](repeating: CLLocationCoordinate2DMake(0, 0), count: 3)
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     
     
     override func viewDidLoad() {
+        
+        
         //Shows a simple instruction 'pinchbutton' on screen
         fadeOut(myView: pinchButton)
-
+        
         //Due to unforeseen errors resulting from updating data between view controllers, this bypass was used to simply check for updates every 100 miliseconds.
         _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
 
-       
+        
+        
         
         
         super.viewDidLoad()
+        mapView.showsUserLocation = true
         //Creates a storage check for the user's latitude. Since a latitude of 1000 is impossible, we know that something is wrong if it is still 1000.0
         let defaults = UserDefaults.standard
         defaults.set(1000.0, forKey: "userLatitude")
@@ -44,11 +60,13 @@ class ViewControllerElec: UIViewController {
         let startLocation = CLLocationCoordinate2DMake(45.4236, -75.7009)
         let region = MKCoordinateRegionMake(startLocation, span)
         mapView.setRegion(region, animated: false)
+        mapView.delegate = self
         
         //Setting up the location manager
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         
         switch CLLocationManager.authorizationStatus() {
         case  .restricted, .denied:
@@ -69,9 +87,9 @@ class ViewControllerElec: UIViewController {
             
             self.present(alertController, animated: true, completion: nil)
         default: ()
-        
+            
         }
-    
+        
         
         if #available(iOS 9.0, *) {
             locationManager.requestLocation()
@@ -93,8 +111,8 @@ class ViewControllerElec: UIViewController {
         
         var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
         var Battery : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3042)
-        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
-
+        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1230)
+        
         
         var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost", "BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
         var initCounter = 0;
@@ -107,7 +125,7 @@ class ViewControllerElec: UIViewController {
                 if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
                     let readArray : [NSString] = testArray! as! [NSString]
                     Electronics[initCounter%5] = readArray as [String]
-
+                    
                 }
             } else if initCounter < 10{
                 if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
@@ -123,30 +141,43 @@ class ViewControllerElec: UIViewController {
                 }
             }
             
-
+            
             
             initCounter+=1
         }
         
         
         
-            var markCount = 0
-            while markCount < 1888 {
-                let anno = MKPointAnnotation()
-                let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
-                anno.coordinate = myLocation
-                anno.title = Electronics[0][markCount]
-                anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
-                self.mapView.addAnnotation(anno)
-                
-                markCount += 1
-            }
-        fadeOut(myView: pinchButton)
+        var markCount = 0
+        let sourceLocation = mapView.userLocation.location
+        
+        while markCount < 1888 {
             
-                
+            removeOverlays()
+            let anno = MKPointAnnotation()
+            let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
+            
+            anno.coordinate = myLocation
+            anno.title = Electronics[0][markCount]
+            anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
+            self.mapView.addAnnotation(anno)
+            
+            
+            markCount += 1
+            
+        }
+        print(closestPinDistance[0])
+        fadeOut(myView: pinchButton)
+        
+        
         
     }
     
+    @IBOutlet weak var cButton: UIButton!
+    @IBAction func cancelOverlay(_ sender: Any) {
+        removeOverlays()
+        
+    }
     @IBAction func userLocationButton(_ sender: Any) {
         switch CLLocationManager.authorizationStatus() {
         case .restricted, .denied:
@@ -165,6 +196,7 @@ class ViewControllerElec: UIViewController {
             }
             alertController.addAction(openAction)
             
+            
             self.present(alertController, animated: true, completion: nil)
         default: ()
             
@@ -172,17 +204,27 @@ class ViewControllerElec: UIViewController {
         
         let userCoordinates: CLLocationCoordinate2D
         
-        let userLat : Double? = UserDefaults.standard.object(forKey: "userLatitude") as! Double
+//        let userLat : Double? = UserDefaults.standard.object(forKey: "userLatitude") as! Double
         
-        if userLat != 1000.0 {
+        if myUserLatitude != 1000.0 {
             print("changing to user's coordinates")
-            let userLng : Double? = UserDefaults.standard.object(forKey: "userLongitude") as! Double
-            userCoordinates = CLLocationCoordinate2D(latitude: userLat!, longitude: userLng!)
+//            let userLng : Double? = UserDefaults.standard.object(forKey: "userLongitude") as! Double
+            userCoordinates = CLLocationCoordinate2D(latitude: myUserLatitude, longitude: myUserLongitude)
             
             
             let span = MKCoordinateSpanMake(0.09, 0.09)
             let region = MKCoordinateRegionMake(userCoordinates, span)
             mapView.setRegion(region, animated: true)
+            
+//            let annoLocation = CLLocation(latitude: myLocation.latitude, longitude: myLocation.longitude)
+//            print("anno", annoLocation, "source xD", sourceLocation)
+//            if let distance = sourceLocation?.distance(from: annoLocation) {
+//                print(distance)
+//                if distance < (closestPinDistance[0]) {
+//                    closestPinDistance[0] = distance
+//                }
+//            }
+            
         }
         
         
@@ -193,10 +235,21 @@ class ViewControllerElec: UIViewController {
     }
     @IBOutlet weak var pinchButton: UIImageView!
     
+    private func userDistance(from point: MKPointAnnotation) -> Double? {
+        guard let userLocation = mapView.userLocation.location else {
+            return nil // User location unknown!
+        }
+        let pointLocation = CLLocation(
+            latitude:  point.coordinate.latitude,
+            longitude: point.coordinate.longitude
+        )
+        return userLocation.distance(from: pointLocation)
+    }
+    
     func fadeOut(myView: UIImageView) {
         myView.alpha = 0.7
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(realFadeOut), userInfo: nil, repeats: false)
-
+        
         
         
     }
@@ -213,17 +266,21 @@ class ViewControllerElec: UIViewController {
         button.isSelected = true
         button.backgroundColor = UIColor.white
     }
+    
+    
+    
     func update() {
         let selected: String = (UserDefaults.standard.object(forKey: "selector") as AnyObject) as! String
         let defaults = UserDefaults.standard
         defaults.set("-", forKey: "selector")
         if selected == "e" || selected == "b" || selected == "p" {
+            removeOverlays()
             fadeOut(myView: pinchButton)
             mapView.removeAnnotations(mapView.annotations)
-
+            
             var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
             var Battery : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
-            var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
+            var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1230)
             var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost", "BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
             var initCounter = 0;
             while initCounter < 15 {
@@ -245,8 +302,9 @@ class ViewControllerElec: UIViewController {
                 }
                 initCounter+=1
             }
-
             
+            let sourceCoord = self.mapView.userLocation.coordinate
+            let sourceLocation = CLLocation(latitude: sourceCoord.latitude, longitude: sourceCoord.longitude)
             if selected as! String == "e" {
                 var markCount = 0
                 buttonClicked(sender: eButton)
@@ -258,12 +316,21 @@ class ViewControllerElec: UIViewController {
                     anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
                     self.mapView.addAnnotation(anno)
                     
+                    let annoLocation = CLLocation(latitude: anno.coordinate.latitude, longitude: anno.coordinate.longitude)
+                    if let distance:Double = sourceLocation.distance(from: annoLocation) {
+                        if distance < (closestPinDistance[0]) {
+                            closestPinDistance[0] = distance
+                            closestPinCoordinates[0] = annoLocation.coordinate
+                        }
+                    }
                     markCount += 1
                 }
+                print(closestPinDistance[0], closestPinCoordinates[0])
+
                 
             } else if selected as! String == "b" {
                 buttonClicked(sender: bButton)
-
+                
                 var markCount = 0
                 while markCount < 3771 {
                     let anno = MKPointAnnotation()
@@ -277,9 +344,9 @@ class ViewControllerElec: UIViewController {
                 }
             } else if selected as! String == "p" {
                 buttonClicked(sender: pButton)
-
+                
                 var markCount = 0
-                while markCount < 942 {
+                while markCount < 1230 {
                     let anno = MKPointAnnotation()
                     let myLocation = CLLocationCoordinate2DMake(Double(Paint[1][markCount])!, Double(Paint[2][markCount])!)
                     anno.coordinate = myLocation
@@ -308,116 +375,124 @@ class ViewControllerElec: UIViewController {
         eButton.setTitleColor(UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0), for: .normal)
         bButton.setTitleColor(UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0), for: .normal)
         pButton.setTitleColor(UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0), for: .normal)
-
+        
         sender.backgroundColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0)
         sender.setTitleColor(UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0), for: .selected)
         sender.setTitleColor(UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0), for: .normal)
-
+        
     }
-   
-//    lazy var buttons: [UIButton] = [self.ewasteButton, self.paintButton, self.batteryButton]
-
+    
+    //    lazy var buttons: [UIButton] = [self.ewasteButton, self.paintButton, self.batteryButton]
+    
     
     
     @IBAction func ewasteButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set("e", forKey: "selector")
+//        removeOverlays()
         buttonClicked(sender: sender as! UIButton)
-        mapView.removeAnnotations(mapView.annotations)
-        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
-        var initCounter = 0;
-        var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost"]
-        
-        while initCounter < 5 {
-            if initCounter<5{
-                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
-                    let readArray : [NSString] = testArray! as! [NSString]
-                    Electronics[initCounter%5] = readArray as [String]
-                }
-            }
-            initCounter+=1
-        }
-        var markCount = 0
-        while markCount < 1888 {
-            
-            let anno = MKPointAnnotation()
-            let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
-            anno.coordinate = myLocation
-            anno.title = Electronics[0][markCount]
-            anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
-            self.mapView.addAnnotation(anno)
-            markCount += 1
-        }
+//        mapView.removeAnnotations(mapView.annotations)
+//        var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
+//        var initCounter = 0;
+//        var fileNames = ["EName", "ELat", "ELng", "EPhone", "EPost"]
+//        
+//        while initCounter < 5 {
+//            if initCounter<5{
+//                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+//                    let readArray : [NSString] = testArray! as! [NSString]
+//                    Electronics[initCounter%5] = readArray as [String]
+//                }
+//            }
+//            initCounter+=1
+//        }
+//        var markCount = 0
+//        while markCount < 1888 {
+//            
+//            let anno = MKPointAnnotation()
+//            let myLocation = CLLocationCoordinate2DMake(Double(Electronics[1][markCount])!, Double(Electronics[2][markCount])!)
+//            anno.coordinate = myLocation
+//            anno.title = Electronics[0][markCount]
+//            anno.subtitle = "Phone: " + Electronics[3][markCount] + "\n" + "Postal Code: " + Electronics[4][markCount]
+//            self.mapView.addAnnotation(anno)
+//            markCount += 1
+//        }
     }
     
     @IBAction func paintButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set("p", forKey: "selector")
         buttonClicked(sender: sender as! UIButton)
-
-        mapView.removeAnnotations(mapView.annotations)
-        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
-        var initCounter = 0;
-        var fileNames = ["PName", "PLat", "PLng", "PPhone", "PPost"]
-        
-        while initCounter < 5 {
-            if initCounter<5{
-                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
-                    let readArray : [NSString] = testArray! as! [NSString]
-                    Paint[initCounter%5] = readArray as [String]
-                }
-            }
-            initCounter+=1
-        }
-        var markCount = 0
-        while markCount < 942 {
-            
-            let anno = MKPointAnnotation()
-            let myLocation = CLLocationCoordinate2DMake(Double(Paint[1][markCount])!, Double(Paint[2][markCount])!)
-            anno.coordinate = myLocation
-            anno.title = Paint[0][markCount]
-            anno.subtitle = "Phone: " + Paint[3][markCount] + "\n" + "Postal Code: " + Paint[4][markCount]
-            self.mapView.addAnnotation(anno)
-            markCount += 1
-        }
+//
+//        mapView.removeAnnotations(mapView.annotations)
+//        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1230)
+//        var initCounter = 0;
+//        var fileNames = ["PName", "PLat", "PLng", "PPhone", "PPost"]
+//        
+//        while initCounter < 5 {
+//            if initCounter<5{
+//                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+//                    let readArray : [NSString] = testArray! as! [NSString]
+//                    Paint[initCounter%5] = readArray as [String]
+//                }
+//            }
+//            initCounter+=1
+//        }
+//        var markCount = 0
+//        while markCount < 1230 {
+//            
+//            let anno = MKPointAnnotation()
+//            let myLocation = CLLocationCoordinate2DMake(Double(Paint[1][markCount])!, Double(Paint[2][markCount])!)
+//            anno.coordinate = myLocation
+//            anno.title = Paint[0][markCount]
+//            anno.subtitle = "Phone: " + Paint[3][markCount] + "\n" + "Postal Code: " + Paint[4][markCount]
+//            self.mapView.addAnnotation(anno)
+//            markCount += 1
+//        }
         
     }
-
+    
     
     @IBAction func batteryButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set("b", forKey: "selector")
         buttonClicked(sender: sender as! UIButton)
-
-        mapView.removeAnnotations(mapView.annotations)
-        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
-        var initCounter = 0;
-        var fileNames = ["BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
-
-        while initCounter < 5 {
-            if initCounter<5{
-                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
-                    let readArray : [NSString] = testArray! as! [NSString]
-                    Batteries[initCounter%5] = readArray as [String]
-                }
-            }
-            initCounter+=1
-        }
-        var markCount = 0
-        while markCount < 3771 {
-            let anno = MKPointAnnotation()
-            let myLocation = CLLocationCoordinate2DMake(Double(Batteries[1][markCount])!, Double(Batteries[2][markCount])!)
-            anno.coordinate = myLocation
-            anno.title = Batteries[0][markCount]
-            anno.subtitle = "Phone: " + Batteries[3][markCount] + "\n" + "Postal Code: " + Batteries[4][markCount]
-            self.mapView.addAnnotation(anno)
-            markCount += 1
-        }
-        
-        
-
-
-        print("button works")
-    }
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
 //
-//    }
-   
+//        mapView.removeAnnotations(mapView.annotations)
+//        
+//        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
+//        var initCounter = 0;
+//        var fileNames = ["BName", "BLat", "BLng", "BPhone", "BPost", "PName", "PLat", "PLng", "PPhone", "PPost"]
+//        
+//        while initCounter < 5 {
+//            if initCounter<5{
+//                if let testArray : AnyObject? = UserDefaults.standard.object(forKey: fileNames[initCounter]) as AnyObject {
+//                    let readArray : [NSString] = testArray! as! [NSString]
+//                    Batteries[initCounter%5] = readArray as [String]
+//                }
+//            }
+//            initCounter+=1
+//        }
+//        var markCount = 0
+//        while markCount < 3771 {
+//            let anno = MKPointAnnotation()
+//            let myLocation = CLLocationCoordinate2DMake(Double(Batteries[1][markCount])!, Double(Batteries[2][markCount])!)
+//            anno.coordinate = myLocation
+//            anno.title = Batteries[0][markCount]
+//            anno.subtitle = "Phone: " + Batteries[3][markCount] + "\n" + "Postal Code: " + Batteries[4][markCount]
+//            self.mapView.addAnnotation(anno)
+//            markCount += 1
+//        }
+//        
+//        
+//        
+//        
+//        print("button works")
+    }
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+    
+        }
+//
     
 }
 
@@ -438,14 +513,18 @@ extension ViewControllerElec : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        let defaults = UserDefaults.standard
-        defaults.set(Double(locValue.latitude), forKey: "userLatitude")
-        defaults.set(Double(locValue.longitude), forKey: "userLongitude")
-
+        
+        let locValue:CLLocationCoordinate2D = location.coordinate
+        
+        myUserLatitude = locValue.latitude
+        myUserLongitude = locValue.longitude
+        
+        
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mapView.setRegion(region, animated: false)
+        print("locationManger didupdatelocations", myUserLatitude, myUserLongitude)
+//        mapView.setRegion(region, animated: false)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -457,13 +536,13 @@ extension ViewControllerElec : CLLocationManagerDelegate {
 extension ViewControllerElec: HandleMapSearch {
     
     func dropPinZoomIn(_ placemark: MKPlacemark){
-
+        
         // cache the pin
         selectedPin = placemark
         // clear existing pins
         let annotation = MKPointAnnotation()
-        annotation.coordinate = placemark.coordinate
-        annotation.title = placemark.name
+        //        annotation.coordinate = placemark.coordinate
+        //        annotation.title = placemark.name
         
         if let city = placemark.locality,
             let state = placemark.administrativeArea {
@@ -471,24 +550,55 @@ extension ViewControllerElec: HandleMapSearch {
         }
         
         mapView.addAnnotation(annotation)
-        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let span = MKCoordinateSpanMake(0.2, 0.2)
         let region = MKCoordinateRegionMake(placemark.coordinate, span)
         mapView.setRegion(region, animated: false)
+        mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 10, animated: true)
+        
     }
     
 }
 
 
 extension ViewControllerElec : MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print("Zoom: \(mapView.getZoomLevel())")
-        if mapView.getZoomLevel() < 9 {
-            mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 9, animated: true)
+//        if mapView.getZoomLevel() < 8 {
+//            mapView.setCenter(coordinate: mapView.centerCoordinate, zoomLevel: 8, animated: true)
+//        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        ////        let myOverlays = mapView.overlays
+        ////        mapView.removeOverlays(myOverlays)
+        //
+        //        self.mapView.overlays.forEach {
+        //            if !($0 is MKUserLocation) {
+        //                self.mapView.remove($0)
+        //            }
+        //        }
+        
+        if overlay.isKind(of: MKPolyline.self) {
+            let polyline = overlay
+            let polyLineRenderer = MKPolylineRenderer(overlay: polyline as! MKOverlay)
+            // draw the track
+            
+            polyLineRenderer.strokeColor = UIColor(red:0.23, green:0.57, blue:0.95, alpha:0.9)
+            polyLineRenderer.lineWidth = 6.0
+            
+            
+            return polyLineRenderer
+            
+            
         }
+        
+        
+        return MKPolylineRenderer()
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-
+        
         guard !(annotation is MKUserLocation) else { return nil }
         let reuseId = "pin"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
@@ -506,22 +616,24 @@ extension ViewControllerElec : MKMapViewDelegate {
         button.setBackgroundImage(UIImage(named: "car4.png"), for: UIControlState())
         button.setBackgroundImage(UIImage(named: "car4.png"), for: .selected)
         button.alpha = 0.9
-//        
-//        [button, setImage,:[UIImage imageNamed:@"pressed.png"] forState:UIControlStateSelected | UIControlStateHighlighted];
+        //
+        //        [button, setImage,:[UIImage imageNamed:@"pressed.png"] forState:UIControlStateSelected | UIControlStateHighlighted];
         button.accessibilityHint = String(Double(annotation.coordinate.latitude))
         button.accessibilityLabel = String(Double(annotation.coordinate.longitude))
         button.accessibilityValue = annotation.title!
         
         button.addTarget(self, action: #selector(ViewControllerElec.getDirections(sender:)), for:.touchUpInside)
-       
+        
         let subtitleView = UILabel()
         subtitleView.font = subtitleView.font.withSize(12)
         subtitleView.numberOfLines = 0
         subtitleView.text = annotation.subtitle!
         pinView!.detailCalloutAccessoryView = subtitleView
-
+        
         
         pinView?.leftCalloutAccessoryView = button
+        
+        
         
         
         
@@ -529,42 +641,235 @@ extension ViewControllerElec : MKMapViewDelegate {
     }
     
     func getDirections(sender: UIButton){
-
-        //        guard let selectedPin = selectedPin else { return }
-        //        let mapItem = MKMapItem(placemark: selectedPin)
-        //        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        //        mapItem.openInMaps(launchOptions: launchOptions)
-       
-
-        let latitude: CLLocationDegrees = Double(sender.accessibilityHint!)!
-        let longitude: CLLocationDegrees = Double(sender.accessibilityLabel!)!
         
-        let regionDistance:CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-        let options = [ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = sender.accessibilityValue
-        mapItem.openInMaps(launchOptions: options)
-
+        switch CLLocationManager.authorizationStatus() {
+        case .restricted, .denied:
+            let alertController = UIAlertController(
+                title: "Location Access Disabled",
+                message: "To go to your current location, please open this app in settings under 'privacy' and set location access to 'Always'.",
+                preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+                if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+                    UIApplication.shared.openURL(url as URL)
+                }
+            }
+            alertController.addAction(openAction)
+            
+            
+            self.present(alertController, animated: true, completion: nil)
+        default: ()
+            
+        }
+        let userLat : Double? = UserDefaults.standard.object(forKey: "userLatitude") as! Double
         
-        //        var goLatitude:Double
-        //        var goLongitude: Double
+        if myUserLatitude != 1000.0 {
+            
+            //        guard let selectedPin = selectedPin else { return }
+            //        let mapItem = MKMapItem(placemark: selectedPin)
+            //        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+            //        mapItem.openInMaps(launchOptions: launchOptions)
+            
+            
+            let latitude: CLLocationDegrees = Double(sender.accessibilityHint!)!
+            let longitude: CLLocationDegrees = Double(sender.accessibilityLabel!)!
+            
+            //        let regionDistance:CLLocationDistance = 10000
+            //        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+            //        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+            //        let options = [ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+            //        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+            //        let mapItem = MKMapItem(placemark: placemark)
+            //        mapItem.name = sender.accessibilityValue
+            //        mapItem.openInMaps(launchOptions: options)
+            let sourceLocation = mapView.userLocation.location?.coordinate
+            let destinationLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            var routeCoordinates: [CLLocationCoordinate2D]
+            routeCoordinates = [sourceLocation!, destinationLocation]
+            
+            let sourcePlacemark = MKPlacemark(coordinate: sourceLocation!, addressDictionary: nil)
+            let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
+            
+            let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+            let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+            
+            let directionRequest = MKDirectionsRequest()
+            directionRequest.source = sourceMapItem
+            directionRequest.destination = destinationMapItem
+            directionRequest.transportType = .automobile
+            
+            // Calculate the direction
+            let directions = MKDirections(request: directionRequest)
+            
+            directions.calculate {
+                (response, error) -> Void in
+                
+                guard let response = response else {
+                    if let error = error {
+                        print("Error: \(error)");
+                    }
+                    
+                    return
+                }
+                
+                self.removeOverlays2()
+                
+                let route = response.routes[0]
+                var distance = Double(route.distance)
+                distance = distance/100.0
+                distance.round()
+                distance = distance/10.0
+                UIView.animate(withDuration: 1, animations: {
+                    self.distanceBackground.backgroundColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:0.9)
+                    self.distanceBackground.alpha = 0.9
+                    self.distanceLabel.text = String(Double(distance)) + " km"
+                    self.cButton.alpha = 0.9
+                    self.cButton.isEnabled = true
+                })
+                
+                
+                self.mapView.add((route.polyline), level: MKOverlayLevel.aboveRoads)
+                
+                
+                let rect = route.polyline.boundingMapRect
+                let r = self.mapView.mapRectThatFits(rect, edgePadding: UIEdgeInsetsMake(70, 70, 70, 70))
+                self.mapView.setRegion(MKCoordinateRegionForMapRect(r), animated: true)
+                //            self.calculateSegmentDirections(0, time: 0, routes: [], mySource: sourceMapItem, myDest:  destinationMapItem)
+                //            var newCoordinates = routeCoordinates[0]
+                //            let myPolyline = MKPolyline(coordinates: routeCoordinates, count: 2)
+                //            self.mapView.add(myPolyline)
+                //            self.mapView.add(myPolyline, level: MKOverlayLevel.aboveRoads)
+                
+            }
+        }
         
-        //        let goLongitude : AnyObject? = UserDefaults.standard.object(forKey: "lng") as AnyObject
-        //        let goLatitude : AnyObject? = UserDefaults.standard.object(forKey: "lat") as AnyObject
-        //
-        //            print ("Getting direcitons")
-        
-        //        print ("Getting direcitons")
-        //
-        //        let coordinate = CLLocationCoordinate2DMake(goLatitude as! CLLocationDegrees, goLongitude as! CLLocationDegrees)
-        //        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
-        //        mapItem.name = "Recycle Can Location"
-        //        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
         
     }
+    
+    func removeOverlays() {
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            let myOverlays = self.mapView.self.overlays
+            self.mapView.self.removeOverlays(myOverlays)
+            
+            self.mapView.overlays.forEach {
+                if !($0 is MKUserLocation) {
+                    self.mapView.remove($0)
+                }
+            }
+            self.distanceLabel.text = ""
+            self.distanceBackground.backgroundColor = UIColor.white
+            self.distanceBackground.alpha = 0.1
+            self.cButton.alpha = 0.0
+            self.cButton.isEnabled = false
+        })
+    }
+    func removeOverlays2() {
+        let myOverlays = self.mapView.self.overlays
+        self.mapView.self.removeOverlays(myOverlays)
+        
+        self.mapView.overlays.forEach {
+            if !($0 is MKUserLocation) {
+                self.mapView.remove($0)
+            }
+        }
+        distanceLabel.text = ""
+        distanceBackground.backgroundColor = UIColor.white
+        distanceBackground.alpha = 0.1
+        cButton.alpha = 0.0
+        cButton.isEnabled = false
+    }
+    
+    /*func getDistance(destination: CLLocationCoordinate2D) -> Int {
+     var distance :Double
+     let sourceLocation = mapView.userLocation.location?.coordinate
+     let destinationLocation = destination
+     var routeCoordinates: [CLLocationCoordinate2D]
+     routeCoordinates = [sourceLocation!, destinationLocation]
+     
+     let sourcePlacemark = MKPlacemark(coordinate: sourceLocation!, addressDictionary: nil)
+     let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
+     
+     let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+     let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+     
+     let directionRequest = MKDirectionsRequest()
+     directionRequest.source = sourceMapItem
+     directionRequest.destination = destinationMapItem
+     directionRequest.transportType = .automobile
+     
+     // Calculate the direction
+     let directions = MKDirections(request: directionRequest)
+     
+     directions.calculate {
+     (response, error) -> Void in
+     
+     guard let response = response else {
+     if let error = error {
+     print("Error: \(error)");
+     }
+     
+     return
+     }
+     let route = response.routes[0]
+     distance = route.distance
+     }
+     return Int(distance)
+     
+     
+     }
+     */
+    /*  func calculateSegmentDirections(_ index: Int,
+     time: TimeInterval, routes: [MKRoute], mySource: MKMapItem, myDest: MKMapItem) {
+     
+     let request: MKDirectionsRequest = MKDirectionsRequest()
+     request.source = mySource
+     request.destination = myDest
+     request.requestsAlternateRoutes = true
+     request.transportType = .automobile
+     
+     let directions = MKDirections(request: request)
+     directions.calculate (completionHandler: {
+     (response: MKDirectionsResponse?, error: NSError?) in
+     if let routeResponse = response?.routes {
+     let quickestRouteForSegment: MKRoute =
+     routeResponse.sorted(by: {$0.expectedTravelTime <
+     $1.expectedTravelTime})[0]
+     
+     var timeVar = time
+     var routesVar = routes
+     
+     routesVar.append(quickestRouteForSegment)
+     timeVar += quickestRouteForSegment.expectedTravelTime
+     
+     if index+2 < self.locationArray.count {
+     self.calculateSegmentDirections(index+1, time: timeVar, routes: routesVar, mySource: mySource, myDest: myDest)
+     } else {
+     self.showRoute(routesVar, time: timeVar)
+     }
+     } else if let _ = error {
+     let alert = UIAlertController(title: nil,
+     message: "Directions not available.", preferredStyle: .alert)
+     let okButton = UIAlertAction(title: "OK",
+     style: .cancel) { (alert) -> Void in
+     self.navigationController?.popViewController(animated: true)
+     }
+     alert.addAction(okButton)
+     self.present(alert, animated: true,
+     completion: nil)
+     }
+     } as! MKDirectionsHandler)
+     } */
+    func showRoute(_ routes: [MKRoute], time: TimeInterval) {
+        for i in 0..<routes.count {
+            mapView.add(routes[i].polyline)
+        }
+    }
+    
+    
 }
 
 fileprivate let MERCATOR_OFFSET: Double = 268435456

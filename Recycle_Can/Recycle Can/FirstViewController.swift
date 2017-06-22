@@ -43,7 +43,7 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
         //Each of these are 5 x XXXX dimensional arrays and a separate identifier is needed for each
         var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
         var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
-        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 943)
+        var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1216)
        
         //An array with the selector names that will be used to identify where information is stored in 'defaults'
         //Since each array has 5 columns, and there are 3 arrays, 15 filenames are needed to specifically identify each column.
