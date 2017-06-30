@@ -37,7 +37,7 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
         
         //This stores which of the 3 buttons are pressed on the home screen. If none were pressed, the '-' assumes the user clicked the "map" icon in the navigation bar
         let defaults = UserDefaults.standard
-        defaults.set("-", forKey: "selector")
+        defaults.set("e", forKey: "selector")
         
         //The local database with the recycling locations across Canada (most of it at least)
         //Each of these are 5 x XXXX dimensional arrays and a separate identifier is needed for each
@@ -90,23 +90,21 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
         }
 
     }
-    
+    let defaults = UserDefaults.standard
+
     @IBAction func electronicsTitleButton(_ sender: Any) {
         //This lets the ViewControllerElec know which button was pressed on the home screen by storing 'e' as the key
-        let defaults = UserDefaults.standard
         defaults.set("e", forKey: "selector")
         
         //Navigates to the map-bar and changes the tab-bar to represent this change
         tabBarController!.selectedIndex = 1;
     }
     @IBAction func batteriesTitleButton(_ sender: Any) {
-        let defaults = UserDefaults.standard
         defaults.set("b", forKey: "selector")
         tabBarController!.selectedIndex = 1;
     }
    
     @IBAction func paintTitleButton(_ sender: Any) {
-        let defaults = UserDefaults.standard
         defaults.set("p", forKey: "selector")
         tabBarController!.selectedIndex = 1;
     }
