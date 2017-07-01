@@ -32,6 +32,10 @@ class ViewControllerElec: UIViewController {
     @IBOutlet weak var bButton: UIButton!
     @IBOutlet weak var pButton: UIButton!
     
+    @IBOutlet weak var searchBlank: UIImageView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
+    
     var selectedPin: MKPlacemark?
     var resultSearchController: UISearchController!
     let locationManager = CLLocationManager()
@@ -49,6 +53,8 @@ class ViewControllerElec: UIViewController {
         
         //Due to unforeseen errors resulting from updating data between view controllers, this bypass was used to simply check for updates every 100 miliseconds.
         _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
+//        _ = Timer.scheduledTimer(timeInterval: 9, target: self, selector: #selector(noLocation), userInfo: nil, repeats: false)
+
 
         
         super.viewDidLoad()
@@ -80,6 +86,7 @@ class ViewControllerElec: UIViewController {
         
         switch CLLocationManager.authorizationStatus() {
         case  .restricted, .denied:
+            realFadeOut()
             let alertController = UIAlertController(
                 title: "Location Access Disabled",
                 message: "To go to your current location, please open this app in settings under 'privacy' and set location access to 'While Using the App'.",
@@ -96,6 +103,7 @@ class ViewControllerElec: UIViewController {
             alertController.addAction(openAction)
             
             self.present(alertController, animated: true, completion: nil)
+            realFadeOut()
         default: ()
             
         }
@@ -111,7 +119,7 @@ class ViewControllerElec: UIViewController {
         resultSearchController.searchResultsUpdater = locationSearchTable
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
-        searchBar.placeholder = "Set Your Location"
+        searchBar.placeholder = "Set Your Postal Code"
         navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController.hidesNavigationBarDuringPresentation = false
         resultSearchController.dimsBackgroundDuringPresentation = true
@@ -142,6 +150,8 @@ class ViewControllerElec: UIViewController {
     @IBAction func userLocationButton(_ sender: Any) {
         switch CLLocationManager.authorizationStatus() {
         case .restricted, .denied:
+            realFadeOut()
+
             let alertController = UIAlertController(
                 title: "Location Access Disabled",
                 message: "To go to your current location, please open this app in settings under 'privacy' and set location access to 'Always'.",
@@ -199,7 +209,7 @@ class ViewControllerElec: UIViewController {
         return userLocation.distance(from: pointLocation)
     }
     
-    func fadeOut(myView: UIImageView) {//This simply adds a delay until the called imageview fades out. This is so that the image still displays for a full second before fading out rather than starting immediately
+    func fadeOut() {//This simply adds a delay until the called imageview fades out. This is so that the image still displays for a full second before fading out rather than starting immediately
         
         
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(realFadeOut), userInfo: nil, repeats: false)
@@ -212,6 +222,8 @@ class ViewControllerElec: UIViewController {
         
         
         UIView.animate(withDuration: 1, delay: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.loading.alpha = 0
+            self.searchBlank.alpha = 0
 
         }, completion: nil)
         
@@ -282,6 +294,33 @@ class ViewControllerElec: UIViewController {
         let r = self.mapView.mapRectThatFits(rect, edgePadding: UIEdgeInsetsMake(200, 130, 200, 130)) //Adds insets so that there is a buffer and the two mkmappoints (annotation and user location) are clearly visible
         
         self.mapView.setRegion(MKCoordinateRegionForMapRect(r), animated: true)
+
+    }
+    
+    func noLocation() {
+        realFadeOut()
+        switch CLLocationManager.authorizationStatus() {
+        case .restricted, .denied:
+            let alertController = UIAlertController(
+                title: "Location Access Disabled",
+                message: "To go to your current location, please open this app in settings under 'privacy' and set location access to 'Always'.",
+                preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+                if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+                    UIApplication.shared.openURL(url as URL)
+                }
+            }
+            alertController.addAction(openAction)
+            
+            
+            self.present(alertController, animated: true, completion: nil)
+        default: ()
+            
+        }
 
     }
     
@@ -450,6 +489,8 @@ extension ViewControllerElec : CLLocationManagerDelegate { //A lot of this code 
         
         myUserLatitude = locValue.latitude //Since this only happens when user location is detected, this is a neat way to check if the user's location is active, otherwise myUserLatitude will be 1000.0 based on its initilization value
         myUserLongitude = locValue.longitude
+        
+        realFadeOut() //Fades out the loading button
         
         
         let span = MKCoordinateSpanMake(0.1, 0.1)
