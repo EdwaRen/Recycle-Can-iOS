@@ -1,5 +1,14 @@
+
+<p align="center">
+
+  <img src="./images/media1.jpg">
+</p>
 # Recycle Can iOS
+
+
+
 Recycle Can is an iOS application that facilitates recycling of electronics, batteries, and paint for Canadians. Making use of Mapkit and geocoding, Recycle Can provides both a navigational toolset as well as a massive database to help users recycle their electronic waste. This is the iOS version with the full and much more functionality of the Recycle Can website. To run the application, it can be found on the iOS app store. Otherwise, manual installation can be done through this repository with a few simple steps
+
 
 # Links
 
@@ -11,6 +20,10 @@ Recycle Can is an iOS application that facilitates recycling of electronics, bat
    * [Navigation Routes](#navigation-routes)
    * [Toolbar](#toolbar)<br />
 4. [Database Files](#database-files)
+5. [Collection](#collection)
+   * [Database Sources](#database-sources)
+   * [XHR Network Responses](#xhr-network-responses)
+   * [Alberta Township System](#alberta-township-system)<br/>
 5. [License](#license)
 6. [Contact](#contact)
 
@@ -33,6 +46,7 @@ The Recycle_Can.ipa file is the only important file needed for installation, the
 Next, drag the .ipa file into iTunes with your iDevice connected.
 
 # Features
+![Wallpaper Image](./images/media2.jpg)
 
 ## Navigation Routes
 Recycle Can provides tools to help navigate to the nearest recycling location. By detecting your location and comparing it with a massive database of recycling centers, Recycle Can calculates the optimal location for your specific needs. Furthermore, the most efficient route to the destination is also plotted in-app that can be followed in real-time. This functionality makes it unnecessary to exit the app, as previous versions would open up Apple's 'Maps' application to plot the route there.
@@ -46,6 +60,21 @@ A toolbar at the bottom of the screen provides helpful buttons to optimize the u
 The databases (in MS Excel) has been linked below. Since the file size is 'relatively' small, it has been decided to simply store it locally rather than a server-side database. This is to avoid potential complications with server down-times and the fact that recycling locations are rather static which do not need constant updates. All the locations have been found in publicly available sources. If there are any inconsistencies or missing locations, please feel free to contact us to express these concerns.
 
 https://drive.google.com/open?id=0B-e2EwA68EQgNnB2cWxOcWp3cjQ
+
+# Collection
+
+## Database sources
+Information was procured from many sources, including municipal and provincial webpages. A major hurdle in this approach was that many provinces did not provide a list of electronic recycling centers available publicly online. Hence some third party sites were also used.
+
+## XHR Network Responses
+Originally designed to be an municipal recycling app for Ottawa, the latitude and longitude locations of the recycling centers were originally manually translated one by one from their postal codes. However, this tactic was soon outdated as the situational objective changed to facilitate the broader goal of creating a nationwide recycling application where it would be too time consuming to manually translate postal codes into coordinates.
+
+To further this issue, much of the recycling locations were found on websites without a single source of all database information. In fact, most webpages simply offered a Google Maps widget with locations dotted around the map without any source for latitude/longitude information necessary to create our own database with these locations. Hence, the necessary coordinate locations needed to be obtained by monitoring all location pin requests from the map widget.
+
+The returned information was monitored using XHR network requests on Firefox where the entire response could be downloaded. These responses often came with much unnecessary metadata and character encoding issues (Merci Québec). Hence a multitude of filters, formulas, and VBA scripts were applied in Excel to return the relevant information.
+
+## Alberta Township System
+Alberta was a very unique province that provided an intriguing challenge in tackling the issue of electronic recycling locations. Official approved recycling locations by a webpage associated with the provincial government gave coordinates in the format of the Alberta Township System (ATS). The process to convert these locations into latitude longitude coordinates was difficult because of the low level worldwide usage of the ATS address format. Even major mapping software such as Google Maps or Apple Maps did not recognize these coordinates. However, there did exist software which allowed manual conversion of ATS addresses into latitude/longitude coordinates, albeit it was a lengthy process. The workaround chosen to make this process faster was to write a script to automate this  mechanism that would inject custom JavaScript into a webpage and loop through the ATS coordinates while recording the returned longitude/latitude coordinates.
 
 # License
 Copyright Edward Ren 2017
