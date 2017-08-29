@@ -6,9 +6,9 @@
 
 # Recycle Can iOS
 
-
-
 Recycle Can is an iOS application that facilitates recycling of electronics, batteries, and paint for Canadians. Making use of Mapkit and geocoding, Recycle Can provides both a navigational toolset as well as a massive database to help users recycle their electronic waste. This is the iOS version with the full and much more functionality of the Recycle Can website. To run the application, it can be found on the iOS app store. Otherwise, manual installation can be done through this repository with a few simple steps
+
+Recycle Can can be found on the Appstore [here](https://itunes.apple.com/us/app/recycle-can/id1248915926?ls=1&mt=8) 
 
 
 # Links
@@ -44,10 +44,24 @@ $ git clone https://github.com/EdwaRen/Recycle_Can_iOS
 The Recycle_Can.ipa file is the only important file needed for installation, the rest are production files that contain the open sourced code.
 
 ## Installation
-Next, drag the .ipa file into iTunes with your iDevice connected.
+This installation works for iTunes 12.x
+Drag the .ipa file into the apps section of your iTunes Library, as seen below
+
+![Tutorial 1](./images/tutorial1.png)
+
+Now connect your device in iTunes, select your device, and go to the 'apps' tab. There, scroll down to the Recycle Can app and click 'Install'. This will change the button to 'Will Install'
+
+![Tutorial 2](./images/tutorial2.png)
+
+Finally, hit the 'Apply' button below to apply this installation.
+
+![Tutorial 3](./images/tutorial3.png)
+
+
+
 
 # Features
-![Wallpaper Image](./images/media2.jpg)
+![Wallpaper Image](./images/media5.jpg)
 
 ## Navigation Routes
 Recycle Can provides tools to help navigate to the nearest recycling location. By detecting your location and comparing it with a massive database of recycling centers, Recycle Can calculates the optimal location for your specific needs. Furthermore, the most efficient route to the destination is also plotted in-app that can be followed in real-time. This functionality makes it unnecessary to exit the app, as previous versions would open up Apple's 'Maps' application to plot the route there.
