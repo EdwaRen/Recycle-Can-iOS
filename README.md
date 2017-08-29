@@ -8,7 +8,7 @@
 
 Recycle Can is an iOS application that facilitates recycling of electronics, batteries, and paint for Canadians. Making use of Mapkit and geocoding, Recycle Can provides both a navigational toolset as well as a massive database to help users recycle their electronic waste. This is the iOS version with the full and much more functionality of the Recycle Can website. To run the application, it can be found on the iOS app store. Otherwise, manual installation can be done through this repository with a few simple steps
 
-Recycle Can can be found on the Appstore [here](https://itunes.apple.com/us/app/recycle-can/id1248915926?ls=1&mt=8) 
+Recycle Can can be found on the Appstore [here](https://itunes.apple.com/us/app/recycle-can/id1248915926?ls=1&mt=8)
 
 
 # Links
@@ -36,7 +36,7 @@ Recycle Can will work with any iOS device running iOS 9.0 or above. It is highly
 Recycle Can can be installed manually or on the app store. The way to manually install this iOS application is detailed below
 
 ## Download
-Find the Recycle_Can.ipa file in the main directory and download it. This can be done by doing
+It is recommended to download Recycle Can directly from the App Store, however, it can still be downloaded manually. Find the Recycle_Can.ipa file in the main directory and download it. This can be done by doing
 
 ```
 $ git clone https://github.com/EdwaRen/Recycle_Can_iOS
