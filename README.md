@@ -47,7 +47,7 @@ The Recycle_Can.ipa file is the only important file needed for installation, the
 This installation works for iTunes 12.x
 Drag the .ipa file into the apps section of your iTunes Library, as seen below
 
-![Tutorial 1](./images/tutorial1.png)
+![Tutorial 1](./images/tutorial0.png)
 
 Now connect your device in iTunes, select your device, and go to the 'apps' tab. There, scroll down to the Recycle Can app and click 'Install'. This will change the button to 'Will Install'
 
