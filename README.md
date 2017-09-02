@@ -17,7 +17,11 @@ Recycle Can has been featured on multiple news outlets such as
 </p>
 
 <p align="center">
-[Metro News](http://www.metronews.ca/news/ottawa/2017/08/30/ottawa-student-s-recycling-app-a-success.html)<br/>
+
+[Metro News](http://www.metronews.ca/news/ottawa/2017/08/30/ottawa-student-s-recycling-app-a-success.html)
+
+<br/>
+
 </p>
 
 <p align="center">
@@ -25,7 +29,11 @@ Recycle Can has been featured on multiple news outlets such as
 </p>
 
 <p align="center">
-[CA News Ottawa](http://www.canewsottawa.ca/single-post/2017/08/28/Ottawa-Teen-Takes-on-the-Toxic-Problem-of-Electronic-Waste)<br/>
+
+[CA News Ottawa](http://www.canewsottawa.ca/single-post/2017/08/28/Ottawa-Teen-Takes-on-the-Toxic-Problem-of-Electronic-Waste)
+
+<br/>
+
 </p>
 
 <p align="center">
@@ -33,7 +41,11 @@ Recycle Can has been featured on multiple news outlets such as
 </p>
 
 <p align="center">
-[Ottawa TechWatch](http://www.ottawatechwatch.com/story.php?title=recycle-can)<br/>
+
+[Ottawa TechWatch](http://www.ottawatechwatch.com/story.php?title=recycle-can)
+
+<br/>
+
 </p>
 
 
