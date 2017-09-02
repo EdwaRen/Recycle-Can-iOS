@@ -16,37 +16,33 @@ Recycle Can has been featured on multiple news outlets such as
 <img src="./images/MetroNewsLogo.png"><br/>
 </p>
 
-<p align="center">
+<center>
 
 [Metro News](http://www.metronews.ca/news/ottawa/2017/08/30/ottawa-student-s-recycling-app-a-success.html)
 
-<br/>
 
-</p>
+</center>
 
 <p align="center">
 <img src="./images/CANewsOttawaLogo.png"><br/>
 </p>
 
-<p align="center">
+<center>
 
 [CA News Ottawa](http://www.canewsottawa.ca/single-post/2017/08/28/Ottawa-Teen-Takes-on-the-Toxic-Problem-of-Electronic-Waste)
 
-<br/>
 
-</p>
+</center>
 
 <p align="center">
 <img src="./images/OttawaTechWatchLogo.png"><br/>
 </p>
 
-<p align="center">
+<center>
 
 [Ottawa TechWatch](http://www.ottawatechwatch.com/story.php?title=recycle-can)
 
-<br/>
-
-</p>
+</center>
 
 
 # Links
