@@ -1,7 +1,7 @@
 
 <p align="center">
 
-  <img src="./images/media1.jpg">
+<img src="./images/media1.jpg">
 </p>
 
 # Recycle Can iOS
@@ -13,17 +13,27 @@ Recycle Can can be found on the Appstore [here](https://itunes.apple.com/us/app/
 Recycle Can has been featured on multiple news outlets such as
 
 <p align="center">
-  <img src="./images/MetroNewsLogo.png"><br/>
+<img src="./images/MetroNewsLogo.png"><br/>
+</p>
 
-  [Metro News](http://www.metronews.ca/news/ottawa/2017/08/30/ottawa-student-s-recycling-app-a-success.html)<br/>
+<p align="center">
+[Metro News](http://www.metronews.ca/news/ottawa/2017/08/30/ottawa-student-s-recycling-app-a-success.html)<br/>
+</p>
 
-  <img src="./images/CANewsOttawaLogo.png"><br/>
+<p align="center">
+<img src="./images/CANewsOttawaLogo.png"><br/>
+</p>
 
-  [CA News Ottawa](http://www.canewsottawa.ca/single-post/2017/08/28/Ottawa-Teen-Takes-on-the-Toxic-Problem-of-Electronic-Waste)<br/>
+<p align="center">
+[CA News Ottawa](http://www.canewsottawa.ca/single-post/2017/08/28/Ottawa-Teen-Takes-on-the-Toxic-Problem-of-Electronic-Waste)<br/>
+</p>
 
-  <img src="./images/OttawaTechWatchLogo.png"><br/>
+<p align="center">
+<img src="./images/OttawaTechWatchLogo.png"><br/>
+</p>
 
-  [Ottawa TechWatch](http://www.ottawatechwatch.com/story.php?title=recycle-can)<br/>
+<p align="center">
+[Ottawa TechWatch](http://www.ottawatechwatch.com/story.php?title=recycle-can)<br/>
 </p>
 
 
@@ -31,16 +41,16 @@ Recycle Can has been featured on multiple news outlets such as
 
 1. [Requirements](#requirements)
 2. [Setup](#setup)
-   * [Download](#download)
-   * [Installation](#installation)
+* [Download](#download)
+* [Installation](#installation)
 3. [Features](#features)<br />
-   * [Navigation Routes](#navigation-routes)
-   * [Toolbar](#toolbar)<br />
+* [Navigation Routes](#navigation-routes)
+* [Toolbar](#toolbar)<br />
 4. [Database Files](#database-files)
 5. [Collection](#collection)
-   * [Database Sources](#database-sources)
-   * [XHR Network Responses](#xhr-network-responses)
-   * [Alberta Township System](#alberta-township-system)<br/>
+* [Database Sources](#database-sources)
+* [XHR Network Responses](#xhr-network-responses)
+* [Alberta Township System](#alberta-township-system)<br/>
 5. [License](#license)
 6. [Contact](#contact)
 
