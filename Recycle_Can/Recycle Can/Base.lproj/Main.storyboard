@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -147,54 +148,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-zi-4jd">
-                                <rect key="frame" x="0.0" y="64" width="318.5" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="319" height="455"/>
                                 <connections>
                                     <outlet property="delegate" destination="ajO-rO-Xeo" id="2T7-R5-BBA"/>
                                 </connections>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="amk-pH-0qu">
-                                <rect key="frame" x="7.5" y="72" width="305" height="36"/>
-                                <subviews>
-                                    <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-az-k6z">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="36"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="E-WASTE">
-                                            <color key="titleColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="lwm-Yu-RKy"/>
-                                            <action selector="ewasteButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="bzt-Db-8op"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sX3-q9-4yr">
-                                        <rect key="frame" x="105" y="0.0" width="95" height="36"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="BATTERIES">
-                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="62T-YT-9QS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qJ-K0-BFP">
-                                        <rect key="frame" x="210" y="0.0" width="95" height="36"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="PAINT">
-                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="iHZ-xJ-QOn"/>
-                                            <action selector="paintButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="ItI-fw-OAZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="305" id="7PQ-ay-tR7"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn4-3Z-fPs">
                                 <rect key="frame" x="131.5" y="456" width="57" height="54"/>
                                 <constraints>
@@ -270,32 +228,89 @@
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4fn-H8-TcJ">
-                                <rect key="frame" x="141" y="265" width="37" height="37"/>
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="4Uj-c1-MWR"/>
                                     <constraint firstAttribute="width" constant="37" id="V68-kW-05w"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgl-d8-ryL">
+                                <rect key="frame" x="7" y="72" width="306" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-az-k6z">
+                                        <rect key="frame" x="0.0" y="5" width="94.5" height="36"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="95" id="nRk-gE-TJX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="E-WASTE">
+                                            <color key="titleColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="lwm-Yu-RKy"/>
+                                            <action selector="ewasteButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="bzt-Db-8op"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qJ-K0-BFP">
+                                        <rect key="frame" x="210.5" y="5" width="95.5" height="36"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="PAINT">
+                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="iHZ-xJ-QOn"/>
+                                            <action selector="paintButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="ItI-fw-OAZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sX3-q9-4yr">
+                                        <rect key="frame" x="105.5" y="5" width="95" height="36"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="BATTERIES">
+                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="batteryButton:" destination="ajO-rO-Xeo" eventType="touchUpInside" id="62T-YT-9QS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sX3-q9-4yr" firstAttribute="leading" secondItem="kSR-az-k6z" secondAttribute="trailing" constant="11" id="Abx-Sy-FK7"/>
+                                    <constraint firstItem="sX3-q9-4yr" firstAttribute="width" secondItem="kSR-az-k6z" secondAttribute="width" id="M6V-PU-fYC"/>
+                                    <constraint firstItem="0qJ-K0-BFP" firstAttribute="width" secondItem="kSR-az-k6z" secondAttribute="width" id="PPe-d3-DdV"/>
+                                    <constraint firstItem="kSR-az-k6z" firstAttribute="baseline" secondItem="sX3-q9-4yr" secondAttribute="baseline" id="UPY-Qv-GFu"/>
+                                    <constraint firstItem="sX3-q9-4yr" firstAttribute="centerX" secondItem="Dgl-d8-ryL" secondAttribute="centerX" id="Vn5-Bd-qxb"/>
+                                    <constraint firstItem="kSR-az-k6z" firstAttribute="centerY" secondItem="Dgl-d8-ryL" secondAttribute="centerY" id="WHy-wb-wka"/>
+                                    <constraint firstItem="0qJ-K0-BFP" firstAttribute="leading" secondItem="sX3-q9-4yr" secondAttribute="trailing" constant="10" id="YmL-Gj-7wn"/>
+                                    <constraint firstItem="kSR-az-k6z" firstAttribute="top" secondItem="Dgl-d8-ryL" secondAttribute="top" constant="5" id="ZGC-1S-HtL"/>
+                                    <constraint firstItem="kSR-az-k6z" firstAttribute="leading" secondItem="Dgl-d8-ryL" secondAttribute="leading" id="e6w-Po-d2A"/>
+                                    <constraint firstItem="sX3-q9-4yr" firstAttribute="baseline" secondItem="0qJ-K0-BFP" secondAttribute="baseline" id="hqI-f1-HD9"/>
+                                    <constraint firstAttribute="trailing" secondItem="0qJ-K0-BFP" secondAttribute="trailing" id="rpD-6t-efF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="amk-pH-0qu" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" constant="8" symbolic="YES" id="6JU-qO-kdX"/>
-                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leading" id="7Qk-YF-WsO"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="centerX" secondItem="Qn4-3Z-fPs" secondAttribute="centerX" id="2mi-Rk-X5X"/>
+                            <constraint firstItem="Dgl-d8-ryL" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" constant="8" id="5no-vi-F0w"/>
                             <constraint firstItem="4fn-H8-TcJ" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="GLR-7T-5vm"/>
-                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="bottom" secondItem="q8x-9K-Gbc" secondAttribute="top" id="Gzv-yc-CxI"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="bottom" secondItem="q8x-9K-Gbc" secondAttribute="top" id="ICe-DI-Vle"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" id="LzL-My-rAu"/>
                             <constraint firstItem="4fn-H8-TcJ" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="M3q-R9-xSM"/>
                             <constraint firstItem="Qn4-3Z-fPs" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="RCa-mn-ro5"/>
                             <constraint firstItem="6ia-4q-n6W" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="RZV-BF-ReI"/>
-                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="centerX" secondItem="amk-pH-0qu" secondAttribute="centerX" id="UTM-PA-eGp"/>
+                            <constraint firstAttribute="trailing" secondItem="Dgl-d8-ryL" secondAttribute="trailing" constant="7" id="W8w-A1-O0Z"/>
                             <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="81P-jg-rDy" secondAttribute="bottom" constant="16" id="cIS-PW-YhW"/>
                             <constraint firstItem="RTV-QC-PIQ" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="eQc-GA-S1j"/>
-                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="top" secondItem="35k-5G-UHe" secondAttribute="bottom" id="gkU-Lf-C6X"/>
+                            <constraint firstItem="AWQ-zi-4jd" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leading" id="fZV-PR-kkM"/>
                             <constraint firstItem="fWV-ea-clF" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="l0V-Dq-fHb"/>
+                            <constraint firstItem="Dgl-d8-ryL" firstAttribute="leading" secondItem="exx-7T-I8y" secondAttribute="leading" constant="7" id="pZ1-W4-Ru5"/>
                             <constraint firstItem="fWV-ea-clF" firstAttribute="centerY" secondItem="exx-7T-I8y" secondAttribute="centerY" id="rH3-fs-QRu"/>
                             <constraint firstItem="RTV-QC-PIQ" firstAttribute="top" secondItem="6ia-4q-n6W" secondAttribute="bottom" constant="8" id="rfH-Cl-1Uj"/>
                             <constraint firstItem="81P-jg-rDy" firstAttribute="trailing" secondItem="exx-7T-I8y" secondAttribute="trailingMargin" id="slB-qu-g4G"/>
                             <constraint firstItem="q8x-9K-Gbc" firstAttribute="top" secondItem="Qn4-3Z-fPs" secondAttribute="bottom" constant="9" id="tPg-yz-NDa"/>
-                            <constraint firstItem="amk-pH-0qu" firstAttribute="centerX" secondItem="exx-7T-I8y" secondAttribute="centerX" id="xGJ-Ns-1ja"/>
                             <constraint firstItem="81P-jg-rDy" firstAttribute="top" secondItem="RTV-QC-PIQ" secondAttribute="bottom" constant="8" id="xyQ-u3-thX"/>
                         </constraints>
                     </view>
@@ -315,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ji-4R-pfX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763.7681159420292" y="169.56521739130437"/>
+            <point key="canvasLocation" x="1762.4000000000001" y="168.6656671664168"/>
         </scene>
         <!--View Controller About-->
         <scene sceneID="8Kh-6j-BTe">
@@ -330,33 +345,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlC-0f-W6B">
-                                <rect key="frame" x="19" y="60.5" width="288" height="117"/>
+                                <rect key="frame" x="19" y="61" width="288" height="117"/>
                                 <string key="text">Recycle Can is a project that provides Canadians with a locator to find approved locations to safely dispose of electronics, batteries, and paint. This is to prevent potentially hazardous lead, arsenic, and toxic fumes from leaking out into the environment.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0U-Xj-QjC">
-                                <rect key="frame" x="19" y="29" width="288" height="28.5"/>
+                                <rect key="frame" x="19" y="29" width="288" height="29"/>
                                 <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McA-D7-Yzk">
-                                <rect key="frame" x="19" y="191.5" width="282" height="28.5"/>
+                                <rect key="frame" x="19" y="192" width="282" height="29"/>
                                 <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-3d-7di">
-                                <rect key="frame" x="19" y="225" width="282" height="67"/>
+                                <rect key="frame" x="19" y="226" width="282" height="67"/>
                                 <string key="text">We are constantly updating the locations of approved recycling locations throughout Canada. Please contact us if there are any personal and business inquiries</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-pt-VgO">
-                                <rect key="frame" x="19" y="300" width="282" height="33.5"/>
+                                <rect key="frame" x="19" y="301" width="282" height="34"/>
                                 <string key="text">Email: info@recyclecan.ca 
 Website: www.recyclecan.ca</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -371,65 +386,54 @@ Website: www.recyclecan.ca</string>
                                     <constraint firstAttribute="width" constant="240" id="zNu-fL-9sJ"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="3Rh-9p-dlT">
-                                <rect key="frame" x="19" y="383" width="174" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez8-Ah-q0F">
+                                <rect key="frame" x="19" y="348" width="282" height="29"/>
+                                <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fom-pS-55W">
+                                <rect key="frame" x="19" y="387" width="240" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-sX-Lvf">
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-5K-xVE">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Cnp-PV-jZu"/>
-                                            <constraint firstAttribute="width" constant="30" id="Mz9-P4-Bqu"/>
-                                        </constraints>
-                                        <state key="normal" image="share1"/>
-                                        <connections>
-                                            <action selector="RateBtn:" destination="3ns-26-zyS" eventType="touchUpInside" id="M6N-EF-jzy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-oM-znT">
-                                        <rect key="frame" x="48" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="pD7-Xz-IFv"/>
-                                            <constraint firstAttribute="height" constant="30" id="u5h-Ji-t7l"/>
-                                        </constraints>
-                                        <state key="normal" title="Website" image="share2"/>
-                                        <connections>
-                                            <action selector="WebBtn:" destination="3ns-26-zyS" eventType="touchUpInside" id="l3O-m8-FT2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-5K-xVE">
-                                        <rect key="frame" x="96" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="dp1-zt-Sf4"/>
-                                            <constraint firstAttribute="height" constant="30" id="uHe-Je-R8B"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Facebook" image="share3"/>
                                         <connections>
                                             <action selector="FacebookBtn:" destination="3ns-26-zyS" eventType="touchUpInside" id="i0L-af-3GN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-nq-mgQ">
-                                        <rect key="frame" x="144" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="ISO-uM-sgi"/>
-                                            <constraint firstAttribute="width" constant="30" id="ToK-Oe-2hH"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-oM-znT">
+                                        <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Website" image="share2"/>
+                                        <connections>
+                                            <action selector="WebBtn:" destination="3ns-26-zyS" eventType="touchUpInside" id="l3O-m8-FT2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-nq-mgQ">
+                                        <rect key="frame" x="88" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Mail" image="share4"/>
                                         <connections>
                                             <action selector="MailBtn:" destination="3ns-26-zyS" eventType="touchUpInside" id="7p8-JQ-Kfe"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-sX-Lvf">
+                                        <rect key="frame" x="133" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="share1"/>
+                                        <connections>
+                                            <action selector="RateBtn:" destination="3ns-26-zyS" eventType="touchUpInside" id="M6N-EF-jzy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="115-cX-PyL"/>
-                                    <constraint firstAttribute="width" constant="174" id="h6h-hc-c7B"/>
+                                    <constraint firstAttribute="height" constant="30" id="CAu-Jp-JBi"/>
+                                    <constraint firstAttribute="width" constant="240" id="pBx-2l-Dxv"/>
                                 </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez8-Ah-q0F">
-                                <rect key="frame" x="19" y="346.5" width="282" height="28.5"/>
-                                <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="24"/>
-                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -449,7 +453,6 @@ Website: www.recyclecan.ca</string>
                             <constraint firstItem="DbY-3d-7di" firstAttribute="top" secondItem="McA-D7-Yzk" secondAttribute="bottom" constant="5" id="Ix3-3P-zoo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uEQ-pt-VgO" secondAttribute="trailing" constant="3" id="JUt-Ag-Ypo"/>
                             <constraint firstItem="McA-D7-Yzk" firstAttribute="top" secondItem="hlC-0f-W6B" secondAttribute="bottom" constant="14" id="JuA-5h-uiW"/>
-                            <constraint firstItem="3Rh-9p-dlT" firstAttribute="top" secondItem="ez8-Ah-q0F" secondAttribute="bottom" constant="8" id="MIT-h6-BE8"/>
                             <constraint firstItem="McA-D7-Yzk" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="Mzn-6v-b4d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hlC-0f-W6B" secondAttribute="trailing" constant="-3" id="SiK-vx-Wwf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hlC-0f-W6B" secondAttribute="trailing" constant="-3" id="Ut9-Es-qyy"/>
@@ -458,6 +461,8 @@ Website: www.recyclecan.ca</string>
                             <constraint firstItem="McA-D7-Yzk" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="W2l-Zf-sba"/>
                             <constraint firstItem="ez8-Ah-q0F" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="YoM-Xr-qeZ"/>
                             <constraint firstItem="o0U-Xj-QjC" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="Zcc-zc-c7w"/>
+                            <constraint firstItem="fom-pS-55W" firstAttribute="leading" secondItem="ez8-Ah-q0F" secondAttribute="leading" id="ci6-nN-6NO"/>
+                            <constraint firstItem="fom-pS-55W" firstAttribute="top" secondItem="ez8-Ah-q0F" secondAttribute="bottom" constant="10" id="dNB-JZ-nhf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o0U-Xj-QjC" secondAttribute="trailing" constant="-3" id="gvG-Nk-NaG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="McA-D7-Yzk" secondAttribute="trailing" constant="3" id="hET-q5-4Lz"/>
                             <constraint firstItem="uEQ-pt-VgO" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="hXB-e4-xNO"/>
@@ -468,7 +473,6 @@ Website: www.recyclecan.ca</string>
                             <constraint firstItem="o0U-Xj-QjC" firstAttribute="top" secondItem="L7F-5b-aAr" secondAttribute="bottom" constant="9" id="p20-cN-B7A"/>
                             <constraint firstItem="o0U-Xj-QjC" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="qDr-F8-5d5"/>
                             <constraint firstItem="DbY-3d-7di" firstAttribute="top" secondItem="McA-D7-Yzk" secondAttribute="bottom" constant="5" id="tUF-ou-drh"/>
-                            <constraint firstItem="3Rh-9p-dlT" firstAttribute="leading" secondItem="M4A-V7-PUs" secondAttribute="leadingMargin" constant="3" id="w39-Rs-uHj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o0U-Xj-QjC" secondAttribute="trailing" constant="-3" id="ylV-FJ-DJC"/>
                         </constraints>
                     </view>

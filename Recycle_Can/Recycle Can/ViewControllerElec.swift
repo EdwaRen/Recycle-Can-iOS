@@ -19,7 +19,7 @@ var myUserLatitude: Double = 1000.0
 var myUserLongitude: Double = 1000.0
 
 var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
-var Battery : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
+var Battery : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3772)
 var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1230)
 var overRect : MKMapRect = MKMapRectMake(0, 0, 0, 0)
 
@@ -611,7 +611,7 @@ extension ViewControllerElec : MKMapViewDelegate {
         subtitleView.font = subtitleView.font.withSize(12)
         subtitleView.numberOfLines = 0
         subtitleView.text = annotation.subtitle!
-        pinView!.detailCalloutAccessoryView = subtitleView
+//        pinView!.detailCalloutAccessoryView = subtitleView
         
         
         pinView?.leftCalloutAccessoryView = button      //Organizing the callout by placing the button on the left

@@ -42,7 +42,7 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate, UISearchB
         //The local database with the recycling locations across Canada (most of it at least)
         //Each of these are 5 x XXXX dimensional arrays and a separate identifier is needed for each
         var Electronics : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1888)
-        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3771)
+        var Batteries : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 3772)
         var Paint : [[String]] = Array(repeating: Array(repeating: "0", count: 5), count: 1216)
        
         //An array with the selector names that will be used to identify where information is stored in 'defaults'

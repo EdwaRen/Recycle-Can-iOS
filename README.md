@@ -13,16 +13,17 @@ Recycle Can can be found on the Appstore [here](https://itunes.apple.com/us/app/
 Recycle Can has been featured on multiple news outlets such as
 
 <p align="center">
-<img src="./images/MetroNewsLogo.png"><br/>
+<img src="./images/MetroNewsLogo.png">
 </p>
 
 <p align="center">
 <a href = "http://www.metronews.ca/news/ottawa/2017/08/30/ottawa-student-s-recycling-app-a-success.html">Metro News</a>
 
 </p>
+<br/>
 
 <p align="center">
-<img src="./images/CANewsOttawaLogo.png"><br/>
+<img src="./images/CANewsOttawaLogo.png">
 </p>
 
 <p align="center">
@@ -30,15 +31,17 @@ Recycle Can has been featured on multiple news outlets such as
 
 
 </p>
+<br/>
 
 <p align="center">
-<img src="./images/OttawaTechWatchLogo.png"><br/>
+<img src="./images/OttawaTechWatchLogo.png">
 </p>
 
 <p align="center">
 <a href = "http://www.ottawatechwatch.com/story.php?title=recycle-can">Ottawa TechWatch</a>
 
 </p>
+<br/>
 
 
 # Links
